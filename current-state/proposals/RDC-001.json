@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "id": "RDC-001",
+  "status": "PROPOSED",
+  "epistemic_kind": "decision",
+  "provenance_grade": "inferred",
+  "review_gate": "STOP_FOR_HUMAN",
+  "basis_evidence_ids": [
+    "E-004"
+  ],
+  "assessment_path": "programs/karma-adage-ecosystem/cycles/RDC-001.md",
+  "snapshot_preconditions": [
+    {
+      "path": "current-state/repositories.json",
+      "sha256": "8ecac759a109494ccd6ea7d4a5aeb9b230d0a5384f7c41f581a18e2991ef73ef"
+    },
+    {
+      "path": "current-state/programs.json",
+      "sha256": "c4f4eb630e72700175a09ace76ceddaee66c0319070e173a3d99a465fd4897b0"
+    },
+    {
+      "path": "current-state/blockers.json",
+      "sha256": "a35ecca9acbb286a30f23a0358fa3c5a5b0b70fac28faf64c6bb20fde382ad30"
+    },
+    {
+      "path": "current-state/evidence-freshness.json",
+      "sha256": "cb44cb1763b66851cdfa99a16db4b1004c8e044665e7d6ebbdba3d90d9041a66"
+    }
+  ],
+  "repository_context_proposals": [
+    {
+      "system": "aws-lambda",
+      "observed_local_revision": "497f41716af2a1e0d7ebf83166fec6217a1d070c",
+      "observed_local_branch": "plan/iot-ingest-artifact-publication",
+      "snapshot_revision_unchanged": true,
+      "remote_branch_freshness": "unknown; no fetch or remote verification",
+      "epistemic_kind": "observation",
+      "provenance_grade": "inspected_source",
+      "action": "Add explicit local-checkout context; do not replace a claimed remote branch with a local branch."
+    },
+    {
+      "system": "aws-iac",
+      "observed_local_revision": "155e424f1e970a523ed765d299c91138c458148a",
+      "observed_local_branch": "feature/iot-artifact-publisher",
+      "snapshot_revision_unchanged": true,
+      "remote_branch_freshness": "unknown; no fetch or remote verification",
+      "epistemic_kind": "observation",
+      "provenance_grade": "inspected_source",
+      "action": "Add explicit local-checkout context; do not replace a claimed remote branch with a local branch."
+    },
+    {
+      "system": "aws-config",
+      "observed_local_revision": "9a4a1deb556a8c7d2a3a517843fcd849064ba40c",
+      "observed_local_branch": "feature/iot-artifact-bucket-config",
+      "snapshot_revision_unchanged": true,
+      "remote_branch_freshness": "unknown; no fetch or remote verification",
+      "epistemic_kind": "observation",
+      "provenance_grade": "inspected_source",
+      "action": "Add explicit local-checkout context; do not replace a claimed remote branch with a local branch."
+    },
+    {
+      "system": "iot-digital-twin",
+      "observed_local_revision": "0b303604e741dd642e93834842ed86c78f03e5b4",
+      "observed_local_branch": "plan/aws-sandbox-first-implementation",
+      "snapshot_revision_unchanged": true,
+      "remote_branch_freshness": "unknown; no fetch or remote verification",
+      "epistemic_kind": "observation",
+      "provenance_grade": "inspected_source",
+      "action": "Add explicit local-checkout context; do not replace a claimed remote branch with a local branch."
+    }
+  ],
+  "faraday_context_proposal": {
+    "observed_local_revision_before_cycle": "c9bd9d42bef2a2a962a687fc59c5ad7725405578",
+    "prior_snapshot_revision": "77a248aaa9452f147f7dd98c90cf13c3c7196cb3",
+    "relationship": "prior snapshot is an ancestor; no downstream runtime implication",
+    "epistemic_kind": "derived_fact",
+    "provenance_grade": "inspected_source"
+  },
+  "freshness_proposals": [
+    {
+      "evidence_id": "E-002",
+      "retain_freshness": "historical_for_current_runtime",
+      "annotation": "All 12 inventory entries have unchanged measured bytes; historical API results do not transfer to the separate Lambda implementation.",
+      "basis_evidence_ids": [
+        "E-004"
+      ],
+      "epistemic_kind": "interpretation",
+      "provenance_grade": "inferred"
+    },
+    {
+      "evidence_id": "E-003",
+      "retain_freshness": "bounded_snapshot",
+      "annotation": "All 16 pinned entries have unchanged measured bytes. Source identity rechecked locally; historical tests not rerun, private receipts/live artifact/identity/runtime state unrefreshed. Missing historical worktree revisions remain unknown.",
+      "basis_evidence_ids": [
+        "E-004"
+      ],
+      "epistemic_kind": "interpretation",
+      "provenance_grade": "inferred"
+    },
+    {
+      "evidence_id": "E-004",
+      "proposed_freshness": "current_for_measured_local_source_identity_only",
+      "scope": "28 source-file entries and local Git metadata at collection time; not remote/live or dependency closure",
+      "epistemic_kind": "interpretation",
+      "provenance_grade": "inferred"
+    }
+  ],
+  "blocker_proposal": {
+    "id": "B-003",
+    "program": "karma-adage-ecosystem",
+    "summary": "Independent oracle source sufficiency and custodian/blinding feasibility for EXP-004 are not established.",
+    "question_id": "Q-004",
+    "decision_if_resolved": "Recommend human review of the qualified experiment scope before any package preparation; no execution implied.",
+    "decision_if_unresolved": "Postpone comparator authoring/evaluation; narrow scope or obtain specific missing evidence.",
+    "importance": "HIGH",
+    "evidence_ids": [
+      "E-003",
+      "E-004"
+    ],
+    "epistemic_kind": "interpretation",
+    "provenance_grade": "inferred"
+  },
+  "program_proposal": {
+    "program": "karma-adage-ecosystem",
+    "add_active_question_id": "Q-004",
+    "retain_recommended_experiment_id": "EXP-004",
+    "proposed_next_investigation": "Independent oracle/custody feasibility review before comparator authoring or evaluation",
+    "retain_existing_decision_gate": true,
+    "epistemic_kind": "decision",
+    "provenance_grade": "inferred"
+  },
+  "no_changes": [
+    "No blocker cleared",
+    "No hypothesis or concept maturity changed",
+    "No historical evidence replaced",
+    "No snapshot capture date overwritten",
+    "No authorization created",
+    "No cross-repository work package created or routed"
+  ]
+}

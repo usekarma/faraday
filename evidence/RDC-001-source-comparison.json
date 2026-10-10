@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "cycle_id": "RDC-001",
+  "collected_at": "2026-10-10T22:06:28.752885+00:00",
+  "faraday_revision_before_cycle": "c9bd9d42bef2a2a962a687fc59c5ad7725405578",
+  "scope": "Local checkouts and pinned source paths only; no fetch, remote freshness claim, live operations, private receipts, downstream tests, or experiment execution. Tracked status excludes untracked material; individual captured paths are hashed whether tracked or not.",
+  "observations": [
+    {
+      "repository": "aws-lambda",
+      "snapshot_revision": "497f41716af2a1e0d7ebf83166fec6217a1d070c",
+      "manifest": "evidence/live-program-source-manifest.json",
+      "manifest_parent_head": "497f41716af2a1e0d7ebf83166fec6217a1d070c",
+      "observed_head": "497f41716af2a1e0d7ebf83166fec6217a1d070c",
+      "observed_branch": "plan/iot-ingest-artifact-publication",
+      "tracked_worktree_status": "",
+      "epistemic_kind": "observation",
+      "provenance_grade": "inspected_source",
+      "files": [
+        {
+          "path": "iot-digital-twin-ingest/app.py",
+          "captured_sha256": "fad33baf9b795085ab55575753d0ef4b1b218c609d08b8c39baefb2788a1ea9b",
+          "observed_sha256": "fad33baf9b795085ab55575753d0ef4b1b218c609d08b8c39baefb2788a1ea9b",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "iot-digital-twin-ingest/validation.py",
+          "captured_sha256": "5229478719e1af7d9a922eef743ff295f0473791f33d1147accfb5466b03cc92",
+          "observed_sha256": "5229478719e1af7d9a922eef743ff295f0473791f33d1147accfb5466b03cc92",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "iot-digital-twin-ingest/domain.py",
+          "captured_sha256": "08d7cbb63906a0305203d071666d18ffe24ba0218341b991bb7af5e1f7346cfe",
+          "observed_sha256": "08d7cbb63906a0305203d071666d18ffe24ba0218341b991bb7af5e1f7346cfe",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "iot-digital-twin-ingest/repository.py",
+          "captured_sha256": "c308992297c9ee62b85708ca0803a83f3d4526f3925d71fd06f92af7e332ddad",
+          "observed_sha256": "c308992297c9ee62b85708ca0803a83f3d4526f3925d71fd06f92af7e332ddad",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "iot-digital-twin-ingest/tests/test_ingest.py",
+          "captured_sha256": "8090490aa6c123f9e74481b11f6ef661df5bb752152704a91e72d3a16fdfcd5f",
+          "observed_sha256": "8090490aa6c123f9e74481b11f6ef661df5bb752152704a91e72d3a16fdfcd5f",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        }
+      ]
+    },
+    {
+      "repository": "aws-iac",
+      "snapshot_revision": "155e424f1e970a523ed765d299c91138c458148a",
+      "manifest": "evidence/live-program-source-manifest.json",
+      "manifest_parent_head": "155e424f1e970a523ed765d299c91138c458148a",
+      "observed_head": "155e424f1e970a523ed765d299c91138c458148a",
+      "observed_branch": "feature/iot-artifact-publisher",
+      "tracked_worktree_status": "M components/identity-center-permission-set/README.md\n M scripts/maintain_identity_center.py",
+      "epistemic_kind": "observation",
+      "provenance_grade": "inspected_source",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "captured_sha256": "a6fcf3ed904f5d07c5bc526df8c2238361af74eb0957533e22c3d1074b109399",
+          "observed_sha256": "a6fcf3ed904f5d07c5bc526df8c2238361af74eb0957533e22c3d1074b109399",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "specs/iot-artifact-publisher.md",
+          "captured_sha256": "25a7875732dae3b3772738b29c6eb63a073ce2af8c251ce7f90687456aa59152",
+          "observed_sha256": "25a7875732dae3b3772738b29c6eb63a073ce2af8c251ce7f90687456aa59152",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "scripts/recheck_artifact_publisher.py",
+          "captured_sha256": "aa088e9867483671af5d51df15b8ff0348f087678ab7c04493cc72c9003bbcb0",
+          "observed_sha256": "aa088e9867483671af5d51df15b8ff0348f087678ab7c04493cc72c9003bbcb0",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "tests/test_artifact_publisher_recheck.py",
+          "captured_sha256": "fb2e296ed12736ad124cc79736f13ddbbbe4c624acb402bb8ee55be41458a6b5",
+          "observed_sha256": "fb2e296ed12736ad124cc79736f13ddbbbe4c624acb402bb8ee55be41458a6b5",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "components/iot-digital-twin/main.tf",
+          "captured_sha256": "d3575c1ae9f1e071fbf970d55d8e2bcc0079ea3484c09fc419d099c2012c0406",
+          "observed_sha256": "d3575c1ae9f1e071fbf970d55d8e2bcc0079ea3484c09fc419d099c2012c0406",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "artifacts/worktrees/iot-ingest-config-read/specs/iot-ingest-config-read.md",
+          "captured_sha256": "73dabe49eea672f00ddf7085b866d57b6dd5986baaea2ffeaff700c19c920154",
+          "observed_sha256": "73dabe49eea672f00ddf7085b866d57b6dd5986baaea2ffeaff700c19c920154",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        }
+      ]
+    },
+    {
+      "repository": "aws-config",
+      "snapshot_revision": "9a4a1deb556a8c7d2a3a517843fcd849064ba40c",
+      "manifest": "evidence/live-program-source-manifest.json",
+      "manifest_parent_head": "9a4a1deb556a8c7d2a3a517843fcd849064ba40c",
+      "observed_head": "9a4a1deb556a8c7d2a3a517843fcd849064ba40c",
+      "observed_branch": "feature/iot-artifact-bucket-config",
+      "tracked_worktree_status": "",
+      "epistemic_kind": "observation",
+      "provenance_grade": "inspected_source",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "captured_sha256": "a6fcf3ed904f5d07c5bc526df8c2238361af74eb0957533e22c3d1074b109399",
+          "observed_sha256": "a6fcf3ed904f5d07c5bc526df8c2238361af74eb0957533e22c3d1074b109399",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "docs/iot-digital-twin-sandbox.md",
+          "captured_sha256": "076654d74bb66a976fc4694e5523a6589784a50ea7cba0e8c49359f67fa7e2f5",
+          "observed_sha256": "076654d74bb66a976fc4694e5523a6589784a50ea7cba0e8c49359f67fa7e2f5",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "artifacts/worktrees/iot-ingest-artifact-binding/specs/iot-ingest-artifact-binding.md",
+          "captured_sha256": "904563b5f97031a952aed0cd7d1080ff00873ed8f937644fa29e27f3d1fe0ff5",
+          "observed_sha256": "904563b5f97031a952aed0cd7d1080ff00873ed8f937644fa29e27f3d1fe0ff5",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        }
+      ]
+    },
+    {
+      "repository": "iot-digital-twin",
+      "snapshot_revision": "0b303604e741dd642e93834842ed86c78f03e5b4",
+      "manifest": "evidence/live-program-source-manifest.json",
+      "manifest_parent_head": "0b303604e741dd642e93834842ed86c78f03e5b4",
+      "observed_head": "0b303604e741dd642e93834842ed86c78f03e5b4",
+      "observed_branch": "plan/aws-sandbox-first-implementation",
+      "tracked_worktree_status": "M docs/architecture.md\n M docs/aws-sandbox-plan.md",
+      "epistemic_kind": "observation",
+      "provenance_grade": "inspected_source",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "captured_sha256": "6267865898d865f74eccb31f37f251cbe67e3354639286799993aa68f2cdfd6a",
+          "observed_sha256": "6267865898d865f74eccb31f37f251cbe67e3354639286799993aa68f2cdfd6a",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "src/business_app/telemetry.py",
+          "captured_sha256": "2dfcab1c0e2d508ed7bd12b022fe475b760e6ca4330bfe13d427ad342b54a8a3",
+          "observed_sha256": "2dfcab1c0e2d508ed7bd12b022fe475b760e6ca4330bfe13d427ad342b54a8a3",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        }
+      ]
+    },
+    {
+      "repository": "iot-digital-twin",
+      "snapshot_revision": "0b303604e741dd642e93834842ed86c78f03e5b4",
+      "manifest": "evidence/WP-001-source-manifest.json",
+      "manifest_parent_head": "0b303604e741dd642e93834842ed86c78f03e5b4",
+      "observed_head": "0b303604e741dd642e93834842ed86c78f03e5b4",
+      "observed_branch": "plan/aws-sandbox-first-implementation",
+      "tracked_worktree_status": "M docs/architecture.md\n M docs/aws-sandbox-plan.md",
+      "epistemic_kind": "observation",
+      "provenance_grade": "inspected_source",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "captured_sha256": "6267865898d865f74eccb31f37f251cbe67e3354639286799993aa68f2cdfd6a",
+          "observed_sha256": "6267865898d865f74eccb31f37f251cbe67e3354639286799993aa68f2cdfd6a",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "PROJECT_BRIEF.md",
+          "captured_sha256": "6a38db3407448e8f52b39c70031d3a0cec0c9443732c412c3c7b12c3d58afeb5",
+          "observed_sha256": "6a38db3407448e8f52b39c70031d3a0cec0c9443732c412c3c7b12c3d58afeb5",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "docs/acceptance-criteria.md",
+          "captured_sha256": "c963479d6d8e41f9cd0aab04f5d5d8d2ea065d2a25286c4f1aac794cbc4ebbfa",
+          "observed_sha256": "c963479d6d8e41f9cd0aab04f5d5d8d2ea065d2a25286c4f1aac794cbc4ebbfa",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "docs/architecture.md",
+          "captured_sha256": "91d4492add29f22e28f8654a221cbb359cf79f0bf6fc1b0a5a4cf2d3e25e4f82",
+          "observed_sha256": "91d4492add29f22e28f8654a221cbb359cf79f0bf6fc1b0a5a4cf2d3e25e4f82",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "docs/aws-sandbox-plan.md",
+          "captured_sha256": "6d7117d547975e266516a4a0352a64607a12e2bbc7090ca6e026ad75ae0b428c",
+          "observed_sha256": "6d7117d547975e266516a4a0352a64607a12e2bbc7090ca6e026ad75ae0b428c",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "docs/verification.md",
+          "captured_sha256": "e6abbe91b1284cffc92a4bf6ea4de539c2a7cf3011f23e4bfe3a49663fa1459b",
+          "observed_sha256": "e6abbe91b1284cffc92a4bf6ea4de539c2a7cf3011f23e4bfe3a49663fa1459b",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "docs/prototype-review.md",
+          "captured_sha256": "b59cdda7c6a58768585115e2f47cabd255134a459ec9fc61722b9ac54cf8454f",
+          "observed_sha256": "b59cdda7c6a58768585115e2f47cabd255134a459ec9fc61722b9ac54cf8454f",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "src/business_app/telemetry.py",
+          "captured_sha256": "2dfcab1c0e2d508ed7bd12b022fe475b760e6ca4330bfe13d427ad342b54a8a3",
+          "observed_sha256": "2dfcab1c0e2d508ed7bd12b022fe475b760e6ca4330bfe13d427ad342b54a8a3",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "src/business_app/adapters.py",
+          "captured_sha256": "815b4b9685cdb967ebe15eeb821b1e39d2670a35ef23636003461fafceb832f3",
+          "observed_sha256": "815b4b9685cdb967ebe15eeb821b1e39d2670a35ef23636003461fafceb832f3",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "tests/test_digital_twin_contract.py",
+          "captured_sha256": "857bed89efa865c12490a1ef4b16791730be811ffb67e8fd09f77e8ac4a77d1b",
+          "observed_sha256": "857bed89efa865c12490a1ef4b16791730be811ffb67e8fd09f77e8ac4a77d1b",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "tests/test_telemetry_domain.py",
+          "captured_sha256": "d607309ed5fac70ca80736bd652503df5e94c13bed1d47f62aee8c9b01565836",
+          "observed_sha256": "d607309ed5fac70ca80736bd652503df5e94c13bed1d47f62aee8c9b01565836",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        },
+        {
+          "path": "infra/sandbox/main.tf",
+          "captured_sha256": "3c58d43b69f6064d1e3d1a02c4ad35acde040eae2dc765169b1b0cf49aa7d74b",
+          "observed_sha256": "3c58d43b69f6064d1e3d1a02c4ad35acde040eae2dc765169b1b0cf49aa7d74b",
+          "comparison": "same_bytes",
+          "epistemic_kind": "measurement",
+          "provenance_grade": "reproduced"
+        }
+      ]
+    }
+  ]
+}

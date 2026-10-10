@@ -133,7 +133,7 @@ SPECULATIVE → FORMALIZED → TESTABLE → UNDER_TEST → SUPPORTED → REPLICA
 
 The current [first live research program](programs/karma-adage-ecosystem/README.md) assesses the Karma/Adage IoT engineering history in [E-003](evidence/E-003-live-program-history.md). Its next recommended experiment is [EXP-004](experiments/EXP-004-blinded-discrepancy-challenge.md). **STOP_FOR_HUMAN before creating new cross-repository work packages.** Earlier WP-001/WP-002 remain historical proposals and do not authorize this work.
 
-For the current proposed investigation and the decision it is meant to inform, read [PROGRAM_BRIEF.md](PROGRAM_BRIEF.md), [Q-002](questions/Q-002-evidence-justified-continuation.md), and [WP-001](work-packages/WP-001-trace-evidence-boundaries.md). WP-001 is prepared but has not been routed or executed.
+For the latest research-director assessment, read [RDC-001](programs/karma-adage-ecosystem/cycles/RDC-001.md) and [Q-004](questions/Q-004-independent-discrepancy-oracle.md). Its next-investigation and current-state changes are proposals, not execution authority. The original [WP-001](work-packages/WP-001-trace-evidence-boundaries.md) read-only inventory was completed in E-002; its preserved proposal status does not imply unfinished inventory or authorize further work.
 
 1. Read `AGENTS.md` and `PROGRAM_BRIEF.md`.
 2. Read the ecosystem, epistemic, authority, and current-state registries before directing active work.

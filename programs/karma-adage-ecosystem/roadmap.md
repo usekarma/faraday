@@ -1,5 +1,13 @@
 # Roadmap
 
+## Research-director cycle RDC-001 — 2026-10-10
+
+The [cycle assessment](cycles/RDC-001.md) compares EXP-004 with identity, freshness, diagnosis, Fabric evidence, and agency questions. E-004 rechecks 28 pinned source entries: all match locally, but live/runtime evidence remains unrefreshed and snapshot branch labels differ from local checkout contexts. These are observations and bounded applicability interpretations, not readiness or authorization.
+
+Proposed next investigation: [Q-004](../../questions/Q-004-independent-discrepancy-oracle.md), qualification of EXP-004's independent oracle and custody/freeze procedure before comparator authoring or evaluation. EXP-004 remains the recommended experiment; no experiment has run or received approval from this cycle. Physical identity (Q-003) is the strongest alternative if human priority shifts to live ingestion readiness.
+
+[Snapshot changes](../../current-state/proposals/RDC-001.json) are PROPOSED only. Existing snapshots, blockers, and claim maturity remain unchanged. **STOP_FOR_HUMAN:** review this qualification step and snapshot proposal; the existing gate still prohibits new downstream work packages without explicit human review.
+
 ## Current direction — 2026-10-10
 
 Treat the current IoT effort as the first live research program. E-003 interprets existing engineering evidence; H-002 and H-003 expose verification and correction claims to failure; CE-001 challenges agency/entropy proxies. Recommend EXP-004 as the highest-information-value next experiment under the stated subjective ranking.

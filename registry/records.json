@@ -21,6 +21,8 @@
     {"id":"H-003","type":"hypothesis","title":"Backward tracing improves diagnosis of incorrect assumptions","status":"TESTABLE","path":"hypotheses/H-003-earliest-assumption-diagnosis.md"},
     {"id":"CE-001","type":"counterexample","title":"Uncertainty reduction can accompany coercion or useless options","status":"RECORDED","path":"counterexamples/CE-001-uncertainty-and-agency.md"},
     {"id":"Q-003","type":"question","title":"What would establish authenticated physical identity end-to-end?","status":"OPEN","path":"questions/Q-003-physical-identity-binding.md"},
-    {"id":"EXP-004","type":"experiment","title":"Blinded challenge for decision-relevant discrepancies","status":"PROPOSED","path":"experiments/EXP-004-blinded-discrepancy-challenge.md"}
+    {"id":"EXP-004","type":"experiment","title":"Blinded challenge for decision-relevant discrepancies","status":"PROPOSED","path":"experiments/EXP-004-blinded-discrepancy-challenge.md"},
+    {"id":"E-004","type":"evidence","title":"Director-cycle source applicability check","status":"RECORDED","path":"evidence/E-004-director-cycle-source-applicability.md"},
+    {"id":"Q-004","type":"question","title":"Can the discrepancy oracle be independent and decision-relevant?","status":"OPEN","path":"questions/Q-004-independent-discrepancy-oracle.md"}
   ]
 }

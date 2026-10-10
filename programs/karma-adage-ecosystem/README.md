@@ -4,6 +4,10 @@
 
 Use the existing ecosystem as both engineering platform and experimental apparatus for observable, governable autonomous systems.
 
+## Latest director-cycle assessment
+
+[RDC-001](cycles/RDC-001.md) adds an explicit belief/freshness assessment, decision map, six-factor qualitative ranking, skeptic/verifier passes, and a proposed oracle-feasibility investigation (Q-004). E-004 measures unchanged local pinned source bytes; it does not refresh historical runtime/live evidence. EXP-004 remains proposed and gated. [Current-state updates](../../current-state/proposals/RDC-001.json) remain review proposals; no maturity, readiness, or execution authority changed.
+
 ## First live research program — assessment dated 2026-10-10
 
 The current Karma/Adage IoT digital-twin effort is Faraday's first live research program. Here, **live program** means research anchored in an ongoing engineering effort with reported and locally recorded real operations; it does not mean that the end-to-end IoT prototype is deployed or verified.
