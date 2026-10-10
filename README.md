@@ -62,6 +62,46 @@ Karma        What does the evidence justify, and what may proceed?
 Faraday      What did we learn, and what should change next?
 ```
 
+The machine-readable version lives in `registry/ecosystem.json`. Faraday owns direction, not final authority.
+
+## Explicit knowledge state
+
+Faraday separates durable research history from volatile operating context:
+
+```text
+registry/records.json          durable research lineage
+registry/ecosystem.json        system roles and repository boundaries
+registry/epistemic.json        observation → interpretation → claim vocabulary
+registry/authority.json        execution and authorization boundaries
+current-state/repositories.json captured repository revisions
+current-state/programs.json    active programs and decision gates
+current-state/blockers.json    unresolved questions and decisions they block
+current-state/evidence-freshness.json revision/freshness applicability
+```
+
+`current-state/` is deliberately **not** authoritative truth. It is a reviewable snapshot. Evidence tied to revision A does not silently become evidence for revision B. A refresh proposes changes through `workflows/ecosystem-sync.md`; it does not rewrite historical evidence or grant execution authority.
+
+Faraday distinguishes:
+
+```text
+observation
+measurement
+derived fact
+interpretation
+hypothesis
+counterexample
+decision
+authorization
+```
+
+In particular:
+
+```text
+evidence says safe
+!=
+authorization to execute
+```
+
 ## Record types
 
 | Type | Meaning |
@@ -96,21 +136,29 @@ The current [first live research program](programs/karma-adage-ecosystem/README.
 For the current proposed investigation and the decision it is meant to inform, read [PROGRAM_BRIEF.md](PROGRAM_BRIEF.md), [Q-002](questions/Q-002-evidence-justified-continuation.md), and [WP-001](work-packages/WP-001-trace-evidence-boundaries.md). WP-001 is prepared but has not been routed or executed.
 
 1. Read `AGENTS.md` and `PROGRAM_BRIEF.md`.
-2. Capture a new intuition with `templates/concept.md` or a real event with `templates/observation.md`.
-3. Add the record to `registry/records.json`.
-4. Ask **Researcher** to locate related records and prior art.
-5. Ask **Formalizer** to produce the strongest falsifiable version.
-6. Ask **Skeptic** to attack the claim and propose competing explanations.
-7. Ask **Experiment Designer** for the smallest experiment with high information value.
-8. Route implementation through work packages; do not give Faraday blanket execution authority.
-9. Ask **Verifier** to connect returned evidence to claims without overstating conclusions.
-10. Ask **Program Director** what should be strengthened, weakened, split, falsified, or investigated next.
+2. Read the ecosystem, epistemic, authority, and current-state registries before directing active work.
+3. Capture a new intuition with `templates/concept.md` or a real event with `templates/observation.md`.
+4. Add durable research records to `registry/records.json`.
+5. Ask **Researcher** to locate related records and prior art.
+6. Ask **Formalizer** to produce the strongest falsifiable version.
+7. Ask **Skeptic** to attack the claim and propose competing explanations.
+8. Ask **Experiment Designer** for the smallest experiment with high information value.
+9. Route implementation through work packages; do not give Faraday blanket execution authority.
+10. Ask **Verifier** to connect returned evidence to claims without overstating conclusions.
+11. Ask **Program Director** what should be strengthened, weakened, split, falsified, or investigated next.
 
 Run deterministic checks with:
 
 ```bash
 python3 scripts/validate.py
+python3 scripts/validate_context.py
 python3 -m unittest discover -s tests -v
+```
+
+or simply:
+
+```bash
+make check
 ```
 
 ## Initial research directions

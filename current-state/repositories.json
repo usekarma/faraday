@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-10T21:56:28Z",
+  "status": "snapshot_not_live_truth",
+  "rule": "A repository revision is current evidence only for the exact revision/context inspected. Refresh before using it to support a current-runtime claim.",
+  "repositories": [
+    {"system": "faraday", "repository": "usekarma/faraday", "branch": "main", "revision": "77a248aaa9452f147f7dd98c90cf13c3c7196cb3", "basis": "merged PR #1"},
+    {"system": "aws-iac", "repository": "usekarma/aws-iac", "branch": "main", "revision": "155e424f1e970a523ed765d299c91138c458148a", "basis": "E-003 source manifest / inspected program history"},
+    {"system": "aws-config", "repository": "usekarma/aws-config", "branch": "main", "revision": "9a4a1deb556a8c7d2a3a517843fcd849064ba40c", "basis": "E-003 source manifest / inspected program history"},
+    {"system": "iot-digital-twin", "repository": "usekarma/iot-digital-twin", "branch": "main", "revision": "0b303604e741dd642e93834842ed86c78f03e5b4", "basis": "E-002 source manifest; local working tree had additional edits"},
+    {"system": "aws-lambda", "repository": "usekarma/aws-lambda", "branch": "main", "revision": "497f41716af2a1e0d7ebf83166fec6217a1d070c", "basis": "E-003 source manifest; local working tree had untracked material"},
+    {"system": "karma", "repository": "usekarma/karma", "branch": "main", "revision": null, "basis": "not yet captured by Faraday"},
+    {"system": "adage", "repository": "usekarma/adage", "branch": "main", "revision": null, "basis": "not yet captured by Faraday"},
+    {"system": "adage-fabric", "repository": "usekarma/adage-fabric", "branch": "main", "revision": null, "basis": "not yet captured by Faraday"}
+  ]
+}

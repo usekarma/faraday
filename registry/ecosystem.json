@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "systems": [
+    {
+      "id": "faraday",
+      "repository": "usekarma/faraday",
+      "role": "research_direction",
+      "question": "What should we learn or prove next?",
+      "inputs": ["observations", "evidence", "unresolved_questions", "program_priorities"],
+      "outputs": ["hypotheses", "experiment_specs", "work_package_proposals", "research_decisions"],
+      "authority": {"may_propose": true, "may_read": true, "may_execute_downstream": false, "may_authorize": false}
+    },
+    {
+      "id": "karma",
+      "repository": "usekarma/karma",
+      "role": "evidence_governance",
+      "question": "What does the evidence justify, and what may proceed?",
+      "inputs": ["evidence", "policy", "provenance"],
+      "outputs": ["governance_findings", "continuation_decisions", "policy_feedback"],
+      "authority": {"may_propose": true, "may_read": true, "may_execute_downstream": false, "may_authorize": false}
+    },
+    {
+      "id": "adage",
+      "repository": "usekarma/adage",
+      "role": "control_architecture",
+      "question": "How does intent become a controlled system?",
+      "inputs": ["intent", "constraints", "approved_design"],
+      "outputs": ["control_contracts", "architecture"],
+      "authority": {"may_propose": true, "may_read": true, "may_execute_downstream": false, "may_authorize": false}
+    },
+    {
+      "id": "adage-fabric",
+      "repository": "usekarma/adage-fabric",
+      "role": "observation_substrate",
+      "question": "What happened, and how can it be observed?",
+      "inputs": ["events", "telemetry"],
+      "outputs": ["normalized_observations", "facts", "latency_and_lineage"],
+      "authority": {"may_propose": true, "may_read": true, "may_execute_downstream": false, "may_authorize": false}
+    },
+    {
+      "id": "aws-config",
+      "repository": "usekarma/aws-config",
+      "role": "desired_state",
+      "question": "What should exist?",
+      "inputs": ["approved_configuration_intent"],
+      "outputs": ["desired_state_contracts"],
+      "authority": {"may_propose": true, "may_read": true, "may_execute_downstream": false, "may_authorize": false}
+    },
+    {
+      "id": "aws-iac",
+      "repository": "usekarma/aws-iac",
+      "role": "implementation_and_controlled_execution",
+      "question": "How is approved desired state implemented and verified safely?",
+      "inputs": ["desired_state_contracts", "human_authorization"],
+      "outputs": ["plans", "execution_evidence", "postflight_evidence"],
+      "authority": {"may_propose": true, "may_read": true, "may_execute_downstream": true, "may_authorize": false}
+    },
+    {
+      "id": "aws-lambda",
+      "repository": "usekarma/aws-lambda",
+      "role": "runtime_components",
+      "question": "What runtime behavior implements the approved contract?",
+      "inputs": ["runtime_contracts", "artifacts"],
+      "outputs": ["runtime_code", "tests", "runtime_evidence"],
+      "authority": {"may_propose": true, "may_read": true, "may_execute_downstream": false, "may_authorize": false}
+    },
+    {
+      "id": "iot-digital-twin",
+      "repository": "usekarma/iot-digital-twin",
+      "role": "physical_apparatus",
+      "question": "What can be demonstrated across physical identity, action, state, and evidence?",
+      "inputs": ["experiment_contracts", "device_signals"],
+      "outputs": ["apparatus_behavior", "device_and_system_observations"],
+      "authority": {"may_propose": true, "may_read": true, "may_execute_downstream": false, "may_authorize": false}
+    }
+  ],
+  "human_authority": {
+    "id": "human",
+    "role": "final_authority",
+    "may_authorize": true,
+    "note": "Evidence may inform authorization but never implies it."
+  }
+}

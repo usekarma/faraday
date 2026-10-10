@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "captured_on": "2026-10-10",
+  "blockers": [
+    {
+      "id": "B-001",
+      "program": "karma-adage-ecosystem",
+      "summary": "Authenticated physical device principal is not independently established end-to-end.",
+      "question_id": "Q-003",
+      "decision_if_resolved": "May support complete ingestion-planning evidence, subject to target-repository gates.",
+      "decision_if_unresolved": "Do not claim end-to-end authenticated physical identity or ingestion readiness.",
+      "importance": "HIGH",
+      "evidence_ids": ["E-003"]
+    },
+    {
+      "id": "B-002",
+      "program": "karma-adage-ecosystem",
+      "summary": "EXP-004 has not been approved or executed.",
+      "question_id": "Q-002",
+      "decision_if_resolved": "If approved, Faraday may prepare scoped work-package proposals for the offline experiment.",
+      "decision_if_unresolved": "Do not create new cross-repository work packages for EXP-004.",
+      "importance": "HIGH",
+      "evidence_ids": ["E-003"]
+    }
+  ]
+}

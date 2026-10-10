@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "epistemic_kinds": [
+    {"id": "observation", "definition": "A recorded occurrence or state without added explanation."},
+    {"id": "measurement", "definition": "A value produced by a defined instrument, procedure, or computation."},
+    {"id": "derived_fact", "definition": "A conclusion mechanically entailed by declared observations and rules within a stated scope."},
+    {"id": "interpretation", "definition": "An explanatory reading of observations or facts; alternatives may exist."},
+    {"id": "hypothesis", "definition": "A falsifiable claim that predicts discriminating observations."},
+    {"id": "counterexample", "definition": "A case or argument that weakens, bounds, or falsifies a claim."},
+    {"id": "decision", "definition": "A program choice made with explicit evidence, uncertainty, and consequences."},
+    {"id": "authorization", "definition": "Permission from an authorized human or system boundary to perform a consequential action."}
+  ],
+  "provenance_grades": [
+    "reproduced",
+    "observed_live",
+    "inspected_source",
+    "retained_receipt",
+    "human_reported",
+    "inferred",
+    "unknown"
+  ],
+  "causal_grades": [
+    "none",
+    "association",
+    "mechanism_proposed",
+    "intervention_supported",
+    "causal_claim"
+  ],
+  "rules": [
+    "Observation does not become interpretation implicitly.",
+    "Interpretation does not become hypothesis support without identified evidence.",
+    "A successful action is not evidence of authorization.",
+    "Authorization cannot be inferred from evidence, confidence, or policy text.",
+    "Historical evidence must record the revision or context it bears on.",
+    "Superseded evidence remains historical and is not silently rewritten.",
+    "Unknown and conflicting evidence remain explicit states.",
+    "Causal claims require stronger support than correlation or retrospective narrative."
+  ]
+}
