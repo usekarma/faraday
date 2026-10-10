@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "captured_on": "2026-10-10",
+  "programs": [
+    {
+      "id": "karma-adage-ecosystem",
+      "status": "active",
+      "objective": "Investigate observable, governable autonomous systems through the IoT digital-twin program.",
+      "decision_gate": "Review EXP-004 before creating any new cross-repository work package.",
+      "active_question_ids": ["Q-002", "Q-003"],
+      "active_hypothesis_ids": ["H-002", "H-003"],
+      "recommended_experiment_id": "EXP-004",
+      "priority": {
+        "decision_importance": "HIGH",
+        "expected_discrimination": "HIGH",
+        "cost_and_risk": "LOW",
+        "basis": "subjective ranking; no numeric information-gain estimate"
+      }
+    }
+  ]
+}
