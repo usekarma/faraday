@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "records": [
+    {"id":"C-001","type":"concept","title":"Engineering backpropagation","status":"FORMALIZED","path":"concepts/C-001-engineering-backpropagation.md"},
+    {"id":"C-002","type":"concept","title":"Meaningful difference","status":"FORMALIZED","path":"concepts/C-002-meaningful-difference.md"},
+    {"id":"C-003","type":"concept","title":"Care versus control","status":"SPECULATIVE","path":"concepts/C-003-care-vs-control.md"},
+    {"id":"C-004","type":"concept","title":"Relational alignment","status":"SPECULATIVE","path":"concepts/C-004-relational-alignment.md"},
+    {"id":"O-001","type":"observation","title":"Provider normalized relay_state null to empty string","status":"OBSERVED","path":"observations/O-001-provider-normalization.md"},
+    {"id":"H-001","type":"hypothesis","title":"Care-oriented intervention preserves more agency than control-oriented intervention at matched safety","status":"TESTABLE","path":"hypotheses/H-001-care-preserves-agency.md"},
+    {"id":"EXP-001","type":"experiment","title":"Care versus control toy model","status":"PROPOSED","path":"experiments/EXP-001-care-vs-control-toy-model.md"},
+    {"id":"Q-001","type":"question","title":"Which next experiment has highest expected information gain?","status":"OPEN","path":"questions/Q-001-information-gain.md"}
+  ]
+}
