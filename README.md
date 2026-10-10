@@ -91,6 +91,10 @@ SPECULATIVE → FORMALIZED → TESTABLE → UNDER_TEST → SUPPORTED → REPLICA
 
 ## Start here
 
+The current [first live research program](programs/karma-adage-ecosystem/README.md) assesses the Karma/Adage IoT engineering history in [E-003](evidence/E-003-live-program-history.md). Its next recommended experiment is [EXP-004](experiments/EXP-004-blinded-discrepancy-challenge.md). **STOP_FOR_HUMAN before creating new cross-repository work packages.** Earlier WP-001/WP-002 remain historical proposals and do not authorize this work.
+
+For the current proposed investigation and the decision it is meant to inform, read [PROGRAM_BRIEF.md](PROGRAM_BRIEF.md), [Q-002](questions/Q-002-evidence-justified-continuation.md), and [WP-001](work-packages/WP-001-trace-evidence-boundaries.md). WP-001 is prepared but has not been routed or executed.
+
 1. Read `AGENTS.md` and `PROGRAM_BRIEF.md`.
 2. Capture a new intuition with `templates/concept.md` or a real event with `templates/observation.md`.
 3. Add the record to `registry/records.json`.
@@ -110,6 +114,14 @@ python3 -m unittest discover -s tests -v
 ```
 
 ## Initial research directions
+
+Try the first executable demonstration:
+
+```bash
+python3 scripts/evidence_traps.py
+```
+
+[Evidence traps](experiments/EXP-002-evidence-traps/spec.md) asks whether “the action succeeded” justifies continuing. Twelve synthetic cases exercise identity, permission, freshness, intent, and contradiction. [The first result](evidence/E-001-evidence-traps.md) preserves both the failure of a success-only rule and the limits of an explicit checklist. No ecosystem implementation is tested.
 
 The starter records intentionally label ambitious ideas as speculative:
 

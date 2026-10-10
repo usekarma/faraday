@@ -1,0 +1,101 @@
+{
+  "experiment": "EXP-003",
+  "evidence_kind": "synthetic inputs against local source",
+  "target": "iot-digital-twin",
+  "target_revision": "0b303604e741dd642e93834842ed86c78f03e5b4",
+  "target_worktree_status": "M docs/architecture.md\n M docs/aws-sandbox-plan.md",
+  "target_source": "src/business_app/telemetry.py",
+  "target_source_sha256": "2dfcab1c0e2d508ed7bd12b022fe475b760e6ca4330bfe13d427ad342b54a8a3",
+  "source_sha256": {
+    "scripts/identity_context_probe.py": "b21e3f8b5edb0278c2027f6c3686e26bfeeeaf9b99a6d4f1680823f22cdedddf",
+    "experiments/EXP-003-identity-context.md": "b0134ee711d21f563a0433e4b269ecdefa4c0825e7d84153eba5a65128d0d766"
+  },
+  "payload": {
+    "device_id": "core2-aws-001",
+    "timestamp": "2026-10-10T12:00:00Z",
+    "accel_x": 0.03,
+    "accel_y": -0.02,
+    "accel_z": 1.01,
+    "gyro_x": 0.4,
+    "gyro_y": 0.1,
+    "gyro_z": -0.2,
+    "operating_state": "NORMAL",
+    "sequence": 42
+  },
+  "validation_time": "2026-10-10T12:00:00Z",
+  "cases": [
+    {
+      "case": "matching_context",
+      "authenticated_device_id": "core2-aws-001",
+      "last_sequence": 41,
+      "expected_accept": true,
+      "observed_accept": true,
+      "output": {
+        "device_id": "core2-aws-001",
+        "operating_state": "NORMAL",
+        "sequence": 42,
+        "timestamp": "2026-10-10T12:00:00Z"
+      },
+      "expectation_matched": true
+    },
+    {
+      "case": "mismatched_context",
+      "authenticated_device_id": "another-device",
+      "last_sequence": 41,
+      "expected_accept": false,
+      "observed_accept": false,
+      "output": {
+        "error_type": "ValueError",
+        "message": "device_id does not match the authenticated device identity"
+      },
+      "expectation_matched": true
+    },
+    {
+      "case": "absent_identity",
+      "authenticated_device_id": null,
+      "last_sequence": 41,
+      "expected_accept": true,
+      "observed_accept": true,
+      "output": {
+        "device_id": "core2-aws-001",
+        "operating_state": "NORMAL",
+        "sequence": 42,
+        "timestamp": "2026-10-10T12:00:00Z"
+      },
+      "expectation_matched": true
+    },
+    {
+      "case": "known_replay",
+      "authenticated_device_id": "core2-aws-001",
+      "last_sequence": 42,
+      "expected_accept": false,
+      "observed_accept": false,
+      "output": {
+        "error_type": "ValueError",
+        "message": "sequence is not greater than the last accepted value"
+      },
+      "expectation_matched": true
+    },
+    {
+      "case": "absent_history",
+      "authenticated_device_id": "core2-aws-001",
+      "last_sequence": null,
+      "expected_accept": true,
+      "observed_accept": true,
+      "output": {
+        "device_id": "core2-aws-001",
+        "operating_state": "NORMAL",
+        "sequence": 42,
+        "timestamp": "2026-10-10T12:00:00Z"
+      },
+      "expectation_matched": true
+    }
+  ],
+  "limitation": "Direct domain invocation only; no deployed ingestion path tested.",
+  "portability_revision": {
+    "source_faraday_commit": "eceea8a9cdd549d8710b8e9623ddd48147a44e02",
+    "original_document_sha256": "3aa4f04a893721dc71aa8413ad660a52fd5d59ea1fc9e96492d2d43dc15c7919",
+    "change": "Replace machine location with logical repository identity; preserve original source hashes, revisions, worktree status, and observed results. Historical bytes remain in the source commit; this is not a new observation or experiment run."
+  },
+  "classification": "private-local"
+}

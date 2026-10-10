@@ -35,3 +35,7 @@ The hypothesis is weakened if, under matched safety and comparable resources, co
 ## Proposed experiment
 
 EXP-001
+
+## Program assessment — 2026-10-10
+
+E-003's identity, artifact, verifier, and IAM observations do not measure agency under matched safety/resources. Leave this claim TESTABLE without strengthening or weakening its empirical support. CE-001 challenges uncertainty and option-count proxies and policy labels; meaningful agency needs an independently specified metric and preference-sensitive baseline before testing. No care/alignment conclusion follows from a successful engineering gate.

@@ -1,0 +1,62 @@
+{
+  "target": "iot-digital-twin",
+  "revision": "0b303604e741dd642e93834842ed86c78f03e5b4",
+  "worktree_status": "M docs/architecture.md\n M docs/aws-sandbox-plan.md",
+  "collection_method": "Read-only source inventory; hashes describe working-tree bytes, including local edits. No cloud observations.",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "6267865898d865f74eccb31f37f251cbe67e3354639286799993aa68f2cdfd6a"
+    },
+    {
+      "path": "PROJECT_BRIEF.md",
+      "sha256": "6a38db3407448e8f52b39c70031d3a0cec0c9443732c412c3c7b12c3d58afeb5"
+    },
+    {
+      "path": "docs/acceptance-criteria.md",
+      "sha256": "c963479d6d8e41f9cd0aab04f5d5d8d2ea065d2a25286c4f1aac794cbc4ebbfa"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "91d4492add29f22e28f8654a221cbb359cf79f0bf6fc1b0a5a4cf2d3e25e4f82"
+    },
+    {
+      "path": "docs/aws-sandbox-plan.md",
+      "sha256": "6d7117d547975e266516a4a0352a64607a12e2bbc7090ca6e026ad75ae0b428c"
+    },
+    {
+      "path": "docs/verification.md",
+      "sha256": "e6abbe91b1284cffc92a4bf6ea4de539c2a7cf3011f23e4bfe3a49663fa1459b"
+    },
+    {
+      "path": "docs/prototype-review.md",
+      "sha256": "b59cdda7c6a58768585115e2f47cabd255134a459ec9fc61722b9ac54cf8454f"
+    },
+    {
+      "path": "src/business_app/telemetry.py",
+      "sha256": "2dfcab1c0e2d508ed7bd12b022fe475b760e6ca4330bfe13d427ad342b54a8a3"
+    },
+    {
+      "path": "src/business_app/adapters.py",
+      "sha256": "815b4b9685cdb967ebe15eeb821b1e39d2670a35ef23636003461fafceb832f3"
+    },
+    {
+      "path": "tests/test_digital_twin_contract.py",
+      "sha256": "857bed89efa865c12490a1ef4b16791730be811ffb67e8fd09f77e8ac4a77d1b"
+    },
+    {
+      "path": "tests/test_telemetry_domain.py",
+      "sha256": "d607309ed5fac70ca80736bd652503df5e94c13bed1d47f62aee8c9b01565836"
+    },
+    {
+      "path": "infra/sandbox/main.tf",
+      "sha256": "3c58d43b69f6064d1e3d1a02c4ad35acde040eae2dc765169b1b0cf49aa7d74b"
+    }
+  ],
+  "portability_revision": {
+    "source_faraday_commit": "eceea8a9cdd549d8710b8e9623ddd48147a44e02",
+    "original_document_sha256": "ff220978800e549f9bea5d8359c890709b7f27ec39164a8724183079b309ede7",
+    "change": "Replace machine location with logical repository identity; preserve original source hashes, revisions, worktree status, and observed results. Historical bytes remain in the source commit; this is not a new observation or experiment run."
+  },
+  "classification": "private-local"
+}
