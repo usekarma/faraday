@@ -48,3 +48,7 @@ Choose the first workflow and target repository for the read-only inventory. The
 ## Revision — 2026-10-10
 
 The continued investigation selected local `iot-digital-twin` and completed WP-001's inventory (E-002). EXP-003 reproduced optional-context acceptance in its domain validator. The next decision is whether to implement WP-002's offline ingestion-boundary tests. The full continuation question remains OPEN; neither synthetic experiment establishes live evidence authenticity.
+
+## Director-cycle clarification — RDC-001, 2026-10-10
+
+The earlier WP-002 next-step suggestion was superseded by the first-live-program direction, not accepted as authorization. E-003 distinguishes the separate Lambda implementation from the prototype domain API. E-004 rechecks historical source identity without running runtime tests or certifying live context. [RDC-001](../programs/karma-adage-ecosystem/cycles/RDC-001.md) recommends Q-004's independent-oracle qualification before the still-proposed EXP-004. This is a decision proposal; Q-002 remains OPEN and new downstream packages remain behind STOP_FOR_HUMAN.
