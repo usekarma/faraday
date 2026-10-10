@@ -1,0 +1,257 @@
+{
+  "experiment": "EXP-002",
+  "evidence_kind": "synthetic",
+  "source_sha256": {
+    "scripts/evidence_traps.py": "8a606b963f5b55aa41a8db9e69a52052636968561816626ada585ea779f37df1",
+    "experiments/EXP-002-evidence-traps/spec.md": "5733aa34d5ac55b8bcc2b0936620bb19c924064a8e7d1227e5c31fb8c72b2d4d"
+  },
+  "cases": [
+    {
+      "case": "intact",
+      "input": {
+        "success": true,
+        "device": "relay-7",
+        "intent_revision": 3,
+        "producer": "trusted-collector",
+        "authorized": true,
+        "authorized_at": 90,
+        "observed_at": 100,
+        "decision_at": 110,
+        "contradiction": false
+      },
+      "expected_allow": true,
+      "success_only_allow": true,
+      "contract_allow": true,
+      "violations": []
+    },
+    {
+      "case": "missing_telemetry",
+      "input": {
+        "success": null,
+        "device": "relay-7",
+        "intent_revision": 3,
+        "producer": "trusted-collector",
+        "authorized": true,
+        "authorized_at": 90,
+        "observed_at": 100,
+        "decision_at": 110,
+        "contradiction": false
+      },
+      "expected_allow": false,
+      "success_only_allow": false,
+      "contract_allow": false,
+      "violations": [
+        "missing_or_failed_telemetry"
+      ]
+    },
+    {
+      "case": "failed_telemetry",
+      "input": {
+        "success": false,
+        "device": "relay-7",
+        "intent_revision": 3,
+        "producer": "trusted-collector",
+        "authorized": true,
+        "authorized_at": 90,
+        "observed_at": 100,
+        "decision_at": 110,
+        "contradiction": false
+      },
+      "expected_allow": false,
+      "success_only_allow": false,
+      "contract_allow": false,
+      "violations": [
+        "missing_or_failed_telemetry"
+      ]
+    },
+    {
+      "case": "wrong_device",
+      "input": {
+        "success": true,
+        "device": "relay-8",
+        "intent_revision": 3,
+        "producer": "trusted-collector",
+        "authorized": true,
+        "authorized_at": 90,
+        "observed_at": 100,
+        "decision_at": 110,
+        "contradiction": false
+      },
+      "expected_allow": false,
+      "success_only_allow": true,
+      "contract_allow": false,
+      "violations": [
+        "identity_mismatch"
+      ]
+    },
+    {
+      "case": "old_intent",
+      "input": {
+        "success": true,
+        "device": "relay-7",
+        "intent_revision": 2,
+        "producer": "trusted-collector",
+        "authorized": true,
+        "authorized_at": 90,
+        "observed_at": 100,
+        "decision_at": 110,
+        "contradiction": false
+      },
+      "expected_allow": false,
+      "success_only_allow": true,
+      "contract_allow": false,
+      "violations": [
+        "intent_revision_mismatch"
+      ]
+    },
+    {
+      "case": "stale",
+      "input": {
+        "success": true,
+        "device": "relay-7",
+        "intent_revision": 3,
+        "producer": "trusted-collector",
+        "authorized": true,
+        "authorized_at": 90,
+        "observed_at": 100,
+        "decision_at": 131,
+        "contradiction": false
+      },
+      "expected_allow": false,
+      "success_only_allow": true,
+      "contract_allow": false,
+      "violations": [
+        "stale_or_future_evidence"
+      ]
+    },
+    {
+      "case": "untrusted_collector",
+      "input": {
+        "success": true,
+        "device": "relay-7",
+        "intent_revision": 3,
+        "producer": "self-report",
+        "authorized": true,
+        "authorized_at": 90,
+        "observed_at": 100,
+        "decision_at": 110,
+        "contradiction": false
+      },
+      "expected_allow": false,
+      "success_only_allow": true,
+      "contract_allow": false,
+      "violations": [
+        "untrusted_producer"
+      ]
+    },
+    {
+      "case": "revoked_authorization",
+      "input": {
+        "success": true,
+        "device": "relay-7",
+        "intent_revision": 3,
+        "producer": "trusted-collector",
+        "authorized": false,
+        "authorized_at": 90,
+        "observed_at": 100,
+        "decision_at": 110,
+        "contradiction": false
+      },
+      "expected_allow": false,
+      "success_only_allow": true,
+      "contract_allow": false,
+      "violations": [
+        "authorization_missing_or_revoked"
+      ]
+    },
+    {
+      "case": "before_authorization",
+      "input": {
+        "success": true,
+        "device": "relay-7",
+        "intent_revision": 3,
+        "producer": "trusted-collector",
+        "authorized": true,
+        "authorized_at": 101,
+        "observed_at": 100,
+        "decision_at": 110,
+        "contradiction": false
+      },
+      "expected_allow": false,
+      "success_only_allow": true,
+      "contract_allow": false,
+      "violations": [
+        "evidence_precedes_authorization"
+      ]
+    },
+    {
+      "case": "contradiction",
+      "input": {
+        "success": true,
+        "device": "relay-7",
+        "intent_revision": 3,
+        "producer": "trusted-collector",
+        "authorized": true,
+        "authorized_at": 90,
+        "observed_at": 100,
+        "decision_at": 110,
+        "contradiction": true
+      },
+      "expected_allow": false,
+      "success_only_allow": true,
+      "contract_allow": false,
+      "violations": [
+        "contradictory_or_unknown_observation"
+      ]
+    },
+    {
+      "case": "unknown_authorization",
+      "input": {
+        "success": true,
+        "device": "relay-7",
+        "intent_revision": 3,
+        "producer": "trusted-collector",
+        "authorized": null,
+        "authorized_at": 90,
+        "observed_at": 100,
+        "decision_at": 110,
+        "contradiction": false
+      },
+      "expected_allow": false,
+      "success_only_allow": true,
+      "contract_allow": false,
+      "violations": [
+        "authorization_missing_or_revoked"
+      ]
+    },
+    {
+      "case": "freshness_boundary",
+      "input": {
+        "success": true,
+        "device": "relay-7",
+        "intent_revision": 3,
+        "producer": "trusted-collector",
+        "authorized": true,
+        "authorized_at": 90,
+        "observed_at": 100,
+        "decision_at": 130,
+        "contradiction": false
+      },
+      "expected_allow": true,
+      "success_only_allow": true,
+      "contract_allow": true,
+      "violations": []
+    }
+  ],
+  "summary": {
+    "success_only": {
+      "false_continuations": 8,
+      "false_denials": 0
+    },
+    "contract": {
+      "false_continuations": 0,
+      "false_denials": 0
+    }
+  },
+  "limitation": "Fixture conformance only; no real ecosystem implementation tested."
+}

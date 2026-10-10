@@ -8,6 +8,13 @@
     {"id":"O-001","type":"observation","title":"Provider normalized relay_state null to empty string","status":"OBSERVED","path":"observations/O-001-provider-normalization.md"},
     {"id":"H-001","type":"hypothesis","title":"Care-oriented intervention preserves more agency than control-oriented intervention at matched safety","status":"TESTABLE","path":"hypotheses/H-001-care-preserves-agency.md"},
     {"id":"EXP-001","type":"experiment","title":"Care versus control toy model","status":"PROPOSED","path":"experiments/EXP-001-care-vs-control-toy-model.md"},
-    {"id":"Q-001","type":"question","title":"Which next experiment has highest expected information gain?","status":"OPEN","path":"questions/Q-001-information-gain.md"}
+    {"id":"Q-001","type":"question","title":"Which next experiment has highest expected information gain?","status":"OPEN","path":"questions/Q-001-information-gain.md"},
+    {"id":"Q-002","type":"question","title":"Can evidence justify continuation across the ecosystem?","status":"OPEN","path":"questions/Q-002-evidence-justified-continuation.md"},
+    {"id":"WP-001","type":"work-package","title":"Trace one workflow's evidence and authority boundaries","status":"PROPOSED","path":"work-packages/WP-001-trace-evidence-boundaries.md"},
+    {"id":"EXP-002","type":"experiment","title":"Evidence traps","status":"PROPOSED","path":"experiments/EXP-002-evidence-traps/spec.md"},
+    {"id":"E-001","type":"evidence","title":"Synthetic evidence traps, first run","status":"RECORDED","path":"evidence/E-001-evidence-traps.md"},
+    {"id":"EXP-003","type":"experiment","title":"What happens when trusted identity context is absent?","status":"PROPOSED","path":"experiments/EXP-003-identity-context.md"},
+    {"id":"E-002","type":"evidence","title":"IoT workflow inventory and optional-context probe","status":"RECORDED","path":"evidence/E-002-iot-boundary-inventory.md"},
+    {"id":"WP-002","type":"work-package","title":"Prove ingestion rejects missing trust context before writes","status":"PROPOSED","path":"work-packages/WP-002-require-ingestion-context.md"}
   ]
 }
