@@ -6,6 +6,22 @@ Turn intuitions, observations, and unresolved questions into increasingly precis
 
 Faraday is a research control plane, not a super-agent. It may propose work across repositories but must respect each repository's own authority, safety gates, and human approval boundaries.
 
+## Knowledge state
+
+Before directing an active program, read:
+
+- `registry/ecosystem.json` for system roles and repository boundaries;
+- `registry/epistemic.json` for the observation/measurement/fact/interpretation/hypothesis/decision/authorization distinctions;
+- `registry/authority.json` for consequential-action boundaries;
+- `registry/records.json` for durable research records;
+- `current-state/` for the latest captured program, blocker, repository-revision, and evidence-freshness snapshot.
+
+`current-state/` is not durable truth. It is a revision-scoped convenience snapshot. Never use old source evidence to make a current-runtime claim merely because it remains true in the historical record. When code or apparatus changes, identify which evidence becomes historical, stale, superseded, or still applicable.
+
+A knowledge refresh is a proposal. Follow `workflows/ecosystem-sync.md`; preserve prior evidence and STOP_FOR_HUMAN before claim-maturity changes, new cross-repository work-package routing, or consequential execution requests.
+
+Every unresolved program question should state which decision changes if the question is resolved versus unresolved. Prefer questions with high decision relevance and discriminating power; do not invent quantitative information gain.
+
 ## Epistemic rules
 
 1. Separate observation from interpretation.
@@ -18,6 +34,8 @@ Faraday is a research control plane, not a super-agent. It may propose work acro
 8. A measurement difference is not automatically decision-relevant information.
 9. Correlation, mutual information, and predictability do not by themselves establish causality, care, alignment, or moral value.
 10. Agents are allowed—and expected—to weaken or falsify favored ideas.
+11. Evidence, a safety finding, or a continuation recommendation is not authorization.
+12. Causal language requires stronger support than correlation, source inspection, or retrospective narrative.
 
 ## Workflow
 
@@ -31,7 +49,7 @@ Before promoting an idea:
 6. Propose the smallest experiment that can distinguish outcomes.
 7. Define expected evidence and failure modes before implementation.
 8. Route implementation through scoped work packages to the appropriate repository/apparatus.
-9. When evidence returns, distinguish raw observation, derived fact, interpretation, and decision.
+9. When evidence returns, distinguish raw observation, measurement, derived fact, interpretation, decision, and authorization.
 10. Update status without erasing lineage.
 
 ## Agent roles
@@ -69,5 +87,6 @@ Report:
 - counterexamples or unresolved ambiguity;
 - experiments proposed/completed;
 - work packages routed;
+- current-state or freshness changes;
 - what remains unknown;
 - the exact next decision required from a human.
