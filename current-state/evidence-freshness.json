@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {"id": "F-001", "rule": "Evidence tied to a source revision does not automatically support later revisions."},
+    {"id": "F-002", "rule": "Live/runtime claims require current live evidence; source inspection alone is insufficient."},
+    {"id": "F-003", "rule": "When a newer record contradicts or narrows an older one, mark the older record historical or superseded for that claim; do not delete it."},
+    {"id": "F-004", "rule": "A refresh may propose changed status, but claim maturity changes require explicit evidence review."}
+  ],
+  "tracked": [
+    {"evidence_id": "E-002", "scope": "iot-digital-twin prototype boundary inventory", "revision": "0b303604e741dd642e93834842ed86c78f03e5b4", "freshness": "historical_for_current_runtime"},
+    {"evidence_id": "E-003", "scope": "first live program engineering history assessment", "revision": "multiple pinned sources in evidence/live-program-source-manifest.json", "freshness": "bounded_snapshot"}
+  ]
+}
