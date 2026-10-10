@@ -4,7 +4,7 @@
 
 ## Provenance
 
-Collected locally on 2026-10-10 under WP-001 following the human's instruction to continue. Selected the existing program's candidate, `/home/ted/dev/iot-digital-twin`. Read its AGENTS.md; made no target-repository edits and performed no cloud or device operations.
+Collected locally on 2026-10-10 under WP-001 following the human's instruction to continue. Selected the existing program's candidate, repository `iot-digital-twin` (checkout location deliberately unspecified). Read its AGENTS.md; made no target-repository edits and performed no cloud or device operations.
 
 Target HEAD: `0b303604e741dd642e93834842ed86c78f03e5b4`. The working tree had edits to `docs/architecture.md` and `docs/aws-sandbox-plan.md`; their contents are working proposals, not attributable solely to that commit. [Source manifest](WP-001-source-manifest.json) records hashes of the exact inspected files. [Probe output](EXP-003-run-001.json) records the executed source and harness hashes, synthetic inputs, and results. Source references below are relative to the target repository.
 
@@ -49,3 +49,7 @@ WP-001's bounded inventory is complete; the full ecosystem loop remains unverifi
 ## Later scope clarification — 2026-10-10
 
 E-003 inspected the separate `aws-lambda` runtime and current `aws-iac` component, which contain required principal validation and a declared injection path. This inventory describes the prototype repository and inspected sandbox scaffold, not absence of implementation across the ecosystem. Its direct-domain results remain unchanged. The human's live-program direction supersedes WP-002 as the immediate next step with EXP-004, gated by STOP_FOR_HUMAN before new cross-repository packages.
+
+## Reference-format revision
+
+The inventory manifest now identifies repository `iot-digital-twin` rather than a machine directory. Its recorded revision, file hashes, and private-local classification remain; original JSON identity is retained in portability_revision. See [portable references](REFERENCES.md).

@@ -22,7 +22,30 @@ Seed with the exact publisher `relay_state` null→empty incident. Include contr
 
 Before coding or running methods, freeze each case's decision contract, independent label (EQUIVALENT, MATERIAL, UNKNOWN), supporting specification/source, and rationale. Reviewer must be able to disagree with a label. Unresolved disagreements become UNKNOWN; do not force agreement or use the comparator as oracle. Exact incident facts support only their documented scope. Synthetic variants do not inherit observed operational equivalence automatically.
 
-Split evenly into 12 disclosed design cases and 12 held-out cases, stratified across groups. Hold-out creation/review must be independent of comparator authoring; a later human-approved workflow may use distinct reviewers. Hide labels and variant details until all comparator implementations and exception lists are hashed/frozen. Do not tune after seeing hold-out results; revisions require a new run with new held-out variants and retained failure history.
+Split evenly into 12 disclosed design cases and 12 held-out cases, stratified across groups. Hold-out creation/review must be independent of comparator authoring; a later human-approved workflow may use distinct reviewers. Disclose the design subset and its labels only after the corpus/oracle freeze. Keep held-out inputs, labels, rationales, and variant details hidden from comparator authors until all comparator implementations and exception lists are frozen. Do not tune after seeing hold-out results; revisions require a new run with new held-out variants and retained failure history.
+
+## Required freeze and blinding evidence
+
+Before future implementation or evaluation, define an append-only run/version record with six independently calculated SHA-256 commitments. Hash each artifact's exact retained bytes, or a deterministic file manifest containing repository-relative paths and per-file hashes for a multi-file artifact. Specify the byte encoding/serialization and file ordering before hashing. A single aggregate hash cannot replace these separate commitments.
+
+| Frozen artifact | Required commitment |
+| --- | --- |
+| Full corpus definition | Case IDs, input definitions, decision contracts, source references, and split membership |
+| Oracle labels and rationales | Each label, rationale, supporting source, disagreement record, and UNKNOWN disposition |
+| Disclosed design subset | Exact 12 design cases and their case-ID membership, distinct from the full corpus |
+| Held-out subset | Exact 12 held-out cases and their case-ID membership; protected from comparator authors until reveal |
+| Comparator implementations | Separate hashes/manifests for strict, broad, and scoped implementations, including executable/configuration dependencies used by evaluation |
+| Scoped exception set | Independently hashed exception rules, applicability scope, direction, and supporting rationale; even if embedded in comparator code, retain a separately hashed representation and verify it agrees with the evaluated code |
+
+Freeze the corpus definition, oracle labels/rationales, and both subsets before comparator authoring wherever practical, and always before held-out evaluation. The independent custodian records each artifact's logical ID, version, hash, freeze time/order, author/reviewer role, access boundary, and subsequent disclosure event. Disclose only the design material to comparator authors. Then freeze comparator implementations and the scoped exception set before revealing held-out inputs or labels. Preserve an independent review/acknowledgment of this ordering; timestamps or hashes alone do not prove that authors lacked prior access.
+
+If pre-authoring freeze is impractical, record the reason and any prior author exposure before evaluation, require human review of the deviation, and label the run exploratory unless fresh independent hold-out material restores the declared blinding procedure. No exposure or freeze-order exception may be silently treated as confirmatory evidence.
+
+At reveal/evaluation, verify all six commitments against the retained artifacts and record the exact versions used, reveal order, outputs, and any mismatch. Missing freeze artifacts, commitment mismatches, or undocumented held-out exposure prevent confirmatory interpretation; do not regenerate an artifact merely to match a desired hash. Hashes prove which bytes were committed to, not the correctness of oracle labels, independence of reviewers, or truth of source claims. Label disagreements become UNKNOWN, with the disagreement preserved, rather than forced consensus.
+
+Comparator or exception tuning after held-out reveal invalidates that run for confirmatory interpretation. Retain it with that limitation and its results. Any revision to corpus, labels, split, comparator, or exceptions requires a new retained run/version with new commitments and an explicit link to the prior record. Reusing revealed hold-out cases is exploratory; a new confirmatory run needs fresh independently prepared held-out material. Never rewrite the prior record, its hashes, labels, or negative results.
+
+These are requirements for a future human-approved workflow. No corpus, oracle, comparator, exception set, or execution is created by this specification update.
 
 ## Measurements and predictions
 

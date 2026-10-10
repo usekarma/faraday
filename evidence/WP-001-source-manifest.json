@@ -1,5 +1,5 @@
 {
-  "target": "/home/ted/dev/iot-digital-twin",
+  "target": "iot-digital-twin",
   "revision": "0b303604e741dd642e93834842ed86c78f03e5b4",
   "worktree_status": "M docs/architecture.md\n M docs/aws-sandbox-plan.md",
   "collection_method": "Read-only source inventory; hashes describe working-tree bytes, including local edits. No cloud observations.",
@@ -52,5 +52,11 @@
       "path": "infra/sandbox/main.tf",
       "sha256": "3c58d43b69f6064d1e3d1a02c4ad35acde040eae2dc765169b1b0cf49aa7d74b"
     }
-  ]
+  ],
+  "portability_revision": {
+    "source_faraday_commit": "eceea8a9cdd549d8710b8e9623ddd48147a44e02",
+    "original_document_sha256": "ff220978800e549f9bea5d8359c890709b7f27ec39164a8724183079b309ede7",
+    "change": "Replace machine location with logical repository identity; preserve original source hashes, revisions, worktree status, and observed results. Historical bytes remain in the source commit; this is not a new observation or experiment run."
+  },
+  "classification": "private-local"
 }

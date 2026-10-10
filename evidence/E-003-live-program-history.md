@@ -6,17 +6,17 @@
 
 Assessment dated 2026-10-10. The human supplied ten historical observations. Faraday inspected local source, specs, review summaries, and selected fields in retained private execution receipts. No AWS operation, artifact retrieval, Terraform execution, or device operation was performed. Source inspection corroborates code and recorded history; it is not independent re-observation of remote state.
 
-[Source manifest](live-program-source-manifest.json) pins exact working-tree files, revisions, and dirty-file status. Some relevant specs/worktrees are uncommitted; HEAD alone is insufficient provenance. Private plans, state, raw receipts, and account/identity data remain downstream. Links below refer to local paths, not published evidence accessible to every reader.
+[Source manifest](live-program-source-manifest.json) pins exact working-tree files, revisions, and dirty-file status. Some relevant specs/worktrees are uncommitted; HEAD alone is insufficient provenance. Private plans, state, raw receipts, and account/identity data remain downstream. Links below resolve to stable logical IDs in the [portable reference catalog](REFERENCES.md). Private evidence remains inaccessible without separate custodian access; no public URL is implied.
 
 Grades used here: **reproduced local behavior**, **inspected implementation**, **retained local receipt**, and **human-reported operation**. Hashing a record establishes which bytes were inspected, not the truth of its contents. Classifications can overlap: an observation can yield a bounded finding without becoming support for a broader hypothesis.
 
-The private historical receipt references are [successful apply result](/home/ted/dev/aws-iac/artifacts/identity-center-bootstrap/review-uhd86fs8/maintenance-reviews/artifact-publisher-hrrbk83v/apply-result.json), [original failed postflight](/home/ted/dev/aws-iac/artifacts/identity-center-bootstrap/review-uhd86fs8/maintenance-reviews/artifact-publisher-hrrbk83v/post-apply.json), and [later recheck receipt](/home/ted/dev/aws-iac/artifacts/identity-center-bootstrap/review-uhd86fs8/maintenance-reviews/artifact-publisher-hrrbk83v/postflight-rechecks/review-7yolru5o/postflight.json). They remain private local records; their existence and selected assertions do not amount to independently rerunning those operations.
+The private historical receipt references are [successful apply result](REFERENCES.md#receipt-publisher-apply), [original failed postflight](REFERENCES.md#receipt-publisher-postflight-failure), and [later recheck receipt](REFERENCES.md#receipt-publisher-recheck). They remain private local records; their existence and selected assertions do not amount to independently rerunning those operations.
 
 ## 1. Authenticated identity outranks payload device_id
 
 **Classification:** inspected implementation; reproduced local evidence; bounded finding; unresolved end-to-end question.
 
-**Sources:** [Lambda validation](/home/ted/dev/aws-lambda/iot-digital-twin-ingest/validation.py), [tests](/home/ted/dev/aws-lambda/iot-digital-twin-ingest/tests/test_ingest.py), and [IaC rule](/home/ted/dev/aws-iac/components/iot-digital-twin/main.tf). The runtime requires principal and topic fields and compares all three identity dimensions with configuration; IaC declares `principal()`/`topic()` injection. All 17 runtime unit tests passed in this task, including mismatched identity and missing required fields.
+**Sources:** [Lambda validation](REFERENCES.md#src-lambda-validation), [tests](REFERENCES.md#src-lambda-tests), and [IaC rule](REFERENCES.md#src-iac-iot-rule). The runtime requires principal and topic fields and compares all three identity dimensions with configuration; IaC declares `principal()`/`topic()` injection. All 17 runtime unit tests passed in this task, including mismatched identity and missing required fields.
 
 **Justified:** this implementation requires supplied matching context; payload identity alone does not satisfy its declared validation contract. **Not justified:** the event context is authentic, collision-proof, physically bound, or deployed; a copied valid credential may still emit false telemetry.
 
@@ -34,7 +34,7 @@ The private historical receipt references are [successful apply result](/home/te
 
 **Classification:** unresolved question; inspected blocked planning declaration; negative evidence against readiness.
 
-**Sources:** [artifact-binding spec](/home/ted/dev/aws-config/artifacts/worktrees/iot-ingest-artifact-binding/specs/iot-ingest-artifact-binding.md), [blocker review summary](/home/ted/dev/aws-iac/artifacts/iot-ingestion-blockers/review-f_jc7k76/review-summary.json). Both preserve the dependency and absence of EXPECTED_PRINCIPAL.
+**Sources:** [artifact-binding spec](REFERENCES.md#src-config-artifact-binding), [blocker review summary](REFERENCES.md#review-iot-blockers). Both preserve the dependency and absence of EXPECTED_PRINCIPAL.
 
 **Justified:** these records explicitly retain unknown identity and distinguish structural validity from readiness. **Not justified:** the principal is known, deployed, or a Thing name can substitute for it. **Competing interpretation:** this may be only a useful static gate; another path could bypass it. **Links/action:** Q-003, Q-002, C-004; leave claims unchanged and refuse readiness promotion. This is a question to resolve, not a failed authentication experiment.
 
@@ -58,7 +58,7 @@ The private historical receipt references are [successful apply result](/home/te
 
 **Classification:** historical observation O-001; retained local execution receipts; counterexample to treating verifier failure as proof of failed apply.
 
-**Sources:** [publisher spec](/home/ted/dev/aws-iac/specs/iot-artifact-publisher.md), private `apply-result.json` (returncode 0), private `post-apply.json` (failure status), and retained recheck receipt beneath the publisher maintenance review directory. The spec reports 3 added / 0 changed / 0 destroyed.
+**Sources:** [publisher spec](REFERENCES.md#src-iac-publisher-spec), private `apply-result.json` (returncode 0), private `post-apply.json` (failure status), and retained recheck receipt beneath the publisher maintenance review directory. The spec reports 3 added / 0 changed / 0 destroyed.
 
 **Justified:** local historical records distinguish successful apply from failed comparison. **Not justified:** every effect was correct or a successful Terraform exit is sufficient operational assurance. **Competing interpretation:** strict stopping was prudent while semantics were unknown; postflight may reveal a real omission elsewhere. **Links/action:** C-002 gets additional bounded support, maturity remains FORMALIZED; motivates H-002, without treating the original failure as erased.
 
@@ -66,7 +66,7 @@ The private historical receipt references are [successful apply result](/home/te
 
 **Classification:** derived finding/interpretation supported by the specific recheck; bounded support for C-002.
 
-**Sources:** recheck receipt says verified, exact policy/assignment checks true, existing planning/other permission sets unchanged; [recheck code](/home/ted/dev/aws-iac/scripts/recheck_artifact_publisher.py) and [tests](/home/ted/dev/aws-iac/tests/test_artifact_publisher_recheck.py) restrict the exception to the publisher's planned-null/applied-empty relay field. Provider 6.68.0 scope is recorded in the spec.
+**Sources:** recheck receipt says verified, exact policy/assignment checks true, existing planning/other permission sets unchanged; [recheck code](REFERENCES.md#src-iac-recheck) and [tests](REFERENCES.md#src-iac-recheck-tests) restrict the exception to the publisher's planned-null/applied-empty relay field. Provider 6.68.0 scope is recorded in the spec.
 
 **Justified:** the inspected recheck treats this exact representation as equivalent for its stated point-in-time decision. **Not justified:** generic null/empty equivalence, equivalence under other consumers/provider versions, or an audit of all AWS operations. **Competing interpretation:** the exception could be a post-hoc allowlist fitted to one case; another consumer may distinguish absent and empty. **Links/action:** C-002 strengthened in case-level support only; split general usefulness into new H-002 and test it with held-out drift.
 
@@ -90,7 +90,7 @@ The private historical receipt references are [successful apply result](/home/te
 
 **Classification:** human-reported history; inspected scoped maintenance proposal/review evidence; unresolved longitudinal claim.
 
-**Sources:** [planner-read spec](/home/ted/dev/aws-iac/artifacts/worktrees/iot-ingest-config-read/specs/iot-ingest-config-read.md), blocker summary, publisher spec. The IoT read proposal adds one exact SSM resource, no action delta, and preserves existing conditions/assignments. The inspected summary explicitly says its IAM apply was NOT performed; prior reviewed changes and publisher execution are different operations.
+**Sources:** [planner-read spec](REFERENCES.md#src-iac-planner-read), blocker summary, publisher spec. The IoT read proposal adds one exact SSM resource, no action delta, and preserves existing conditions/assignments. The inspected summary explicitly says its IAM apply was NOT performed; prior reviewed changes and publisher execution are different operations.
 
 **Justified:** the inspected changes/proposals are separately scoped rather than a broad fallback; an access blocker was not declared permission to expand access automatically. **Not justified:** every proposed expansion was applied, global least privilege is proven, or no bypass/privilege accumulation exists. **Competing interpretation:** ordinary IAM review explains the benefit; separately approved small changes can cumulatively create excessive access. **Links/action:** Q-002, C-004; leave alignment/care claims unchanged and separate proposal, approval, execution, and longitudinal privilege sufficiency.
 
@@ -108,6 +108,10 @@ CE-001 gives analytical counterexamples to uncertainty, predictability, reachabl
 
 Recommend EXP-004, not infrastructure completion. Its frozen oracle and three baselines can distinguish a useful general verification rule from incident-specific fitting and permissive normalization. No numerical information-gain estimate is justified.
 
-Executed: `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/ted/dev/aws-lambda/iot-digital-twin-ingest python3 -B -m unittest discover -s /home/ted/dev/aws-lambda/iot-digital-twin-ingest/tests -v`; 17 tests passed. Synthetic/mocked tests establish local behavior only. No downstream files changed, source rebuilt, artifact published/retrieved, or infrastructure implemented.
+Executed (command rendered portably; `AWS_LAMBDA_REPO` denotes the inspected repository checkout): `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$AWS_LAMBDA_REPO/iot-digital-twin-ingest" python3 -B -m unittest discover -s "$AWS_LAMBDA_REPO/iot-digital-twin-ingest/tests" -v`; 17 tests passed. Synthetic/mocked tests establish local behavior only. No downstream files changed, source rebuilt, artifact published/retrieved, or infrastructure implemented.
 
 **STOP_FOR_HUMAN: Approve, revise, or reject EXP-004 before creating any cross-repository work packages.** No H-001/C-003/C-004 promotion, no package routing, and no deployment authority follow from this assessment.
+
+## Reference-format revision
+
+Machine-specific links now resolve through REFERENCES.md/references.json. The assertion-level report REPORT-ARTIFACT-VERIFICATION remains human-reported; receipt IDs remain retained private-local records. No evidence conclusion or maturity changed.

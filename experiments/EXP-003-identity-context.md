@@ -26,4 +26,8 @@ The domain validator may intentionally allow isolated validation while a trusted
 
 ## Apparatus, stopping criteria, and provenance
 
-Run `python3 scripts/identity_context_probe.py /home/ted/dev/iot-digital-twin`. Only the standalone telemetry module is loaded; no adapters, cloud SDKs, gates, credentials, or network calls. Disable bytecode writes. Execute all five cases once and record unexpected results without changing expectations. Report target revision, dirty paths, exact source hashes, executable/spec hashes, inputs, outputs, and expected-outcome agreement. Preserve the raw report separately from interpretation.
+Run `python3 scripts/identity_context_probe.py "$IOT_DIGITAL_TWIN_REPO"`. Only the standalone telemetry module is loaded; no adapters, cloud SDKs, gates, credentials, or network calls. Disable bytecode writes. Execute all five cases once and record unexpected results without changing expectations. Report target revision, dirty paths, exact source hashes, executable/spec hashes, inputs, outputs, and expected-outcome agreement. Preserve the raw report separately from interpretation.
+
+## Portability clarification
+
+`IOT_DIGITAL_TWIN_REPO` is an operator-supplied checkout location, not a committed machine path. The first historical run retains its original source/spec hashes; its explicit portability_revision changes only location metadata. No run was repeated.

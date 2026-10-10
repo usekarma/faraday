@@ -49,7 +49,7 @@ def run(target):
         return subprocess.check_output(["git", "-C", str(target), *args], text=True).strip()
     paths = ["scripts/identity_context_probe.py", "experiments/EXP-003-identity-context.md"]
     return dict(experiment="EXP-003", evidence_kind="synthetic inputs against local source",
-                target=str(target), target_revision=git("rev-parse", "HEAD"),
+                target="iot-digital-twin", classification="private-local", target_revision=git("rev-parse", "HEAD"),
                 target_worktree_status=git("status", "--short"),
                 target_source="src/business_app/telemetry.py",
                 target_source_sha256=hashlib.sha256(source_bytes).hexdigest(),

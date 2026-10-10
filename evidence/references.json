@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "note": "Logical references identify sources; classification describes observed access/provenance, not repository visibility. No downstream URL or revision is inferred. Null means not captured.",
+  "references": [
+    {
+      "id": "SRC-LAMBDA-VALIDATION",
+      "repository": "aws-lambda",
+      "repository_relative_path": "iot-digital-twin-ingest/validation.py",
+      "classification": "private-local",
+      "sha256": "5229478719e1af7d9a922eef743ff295f0473791f33d1147accfb5466b03cc92",
+      "recorded_parent_head": "497f41716af2a1e0d7ebf83166fec6217a1d070c",
+      "worktree_id": "primary",
+      "worktree_revision": "497f41716af2a1e0d7ebf83166fec6217a1d070c",
+      "revision_note": "Inspected working-tree bytes; recorded HEAD does not imply these bytes are committed. See source manifest status.",
+      "source_manifest": "live-program-source-manifest.json",
+      "manifest_path": "iot-digital-twin-ingest/validation.py"
+    },
+    {
+      "id": "SRC-LAMBDA-TESTS",
+      "repository": "aws-lambda",
+      "repository_relative_path": "iot-digital-twin-ingest/tests/test_ingest.py",
+      "classification": "private-local",
+      "sha256": "8090490aa6c123f9e74481b11f6ef661df5bb752152704a91e72d3a16fdfcd5f",
+      "recorded_parent_head": "497f41716af2a1e0d7ebf83166fec6217a1d070c",
+      "worktree_id": "primary",
+      "worktree_revision": "497f41716af2a1e0d7ebf83166fec6217a1d070c",
+      "revision_note": "Inspected working-tree bytes; recorded HEAD does not imply these bytes are committed. See source manifest status.",
+      "source_manifest": "live-program-source-manifest.json",
+      "manifest_path": "iot-digital-twin-ingest/tests/test_ingest.py"
+    },
+    {
+      "id": "SRC-IAC-IOT-RULE",
+      "repository": "aws-iac",
+      "repository_relative_path": "components/iot-digital-twin/main.tf",
+      "classification": "private-local",
+      "sha256": "d3575c1ae9f1e071fbf970d55d8e2bcc0079ea3484c09fc419d099c2012c0406",
+      "recorded_parent_head": "155e424f1e970a523ed765d299c91138c458148a",
+      "worktree_id": "primary",
+      "worktree_revision": "155e424f1e970a523ed765d299c91138c458148a",
+      "revision_note": "Inspected working-tree bytes; recorded HEAD does not imply these bytes are committed. See source manifest status.",
+      "source_manifest": "live-program-source-manifest.json",
+      "manifest_path": "components/iot-digital-twin/main.tf"
+    },
+    {
+      "id": "SRC-CONFIG-ARTIFACT-BINDING",
+      "repository": "aws-config",
+      "repository_relative_path": "specs/iot-ingest-artifact-binding.md",
+      "classification": "private-local",
+      "sha256": "904563b5f97031a952aed0cd7d1080ff00873ed8f937644fa29e27f3d1fe0ff5",
+      "recorded_parent_head": "9a4a1deb556a8c7d2a3a517843fcd849064ba40c",
+      "worktree_id": "iot-ingest-artifact-binding",
+      "worktree_revision": null,
+      "revision_note": "Worktree revision was not captured. Parent repository HEAD must not be attributed to these bytes; use the recorded SHA-256.",
+      "source_manifest": "live-program-source-manifest.json",
+      "manifest_path": "artifacts/worktrees/iot-ingest-artifact-binding/specs/iot-ingest-artifact-binding.md"
+    },
+    {
+      "id": "SRC-IAC-PUBLISHER-SPEC",
+      "repository": "aws-iac",
+      "repository_relative_path": "specs/iot-artifact-publisher.md",
+      "classification": "private-local",
+      "sha256": "25a7875732dae3b3772738b29c6eb63a073ce2af8c251ce7f90687456aa59152",
+      "recorded_parent_head": "155e424f1e970a523ed765d299c91138c458148a",
+      "worktree_id": "primary",
+      "worktree_revision": "155e424f1e970a523ed765d299c91138c458148a",
+      "revision_note": "Inspected working-tree bytes; recorded HEAD does not imply these bytes are committed. See source manifest status.",
+      "source_manifest": "live-program-source-manifest.json",
+      "manifest_path": "specs/iot-artifact-publisher.md"
+    },
+    {
+      "id": "SRC-IAC-RECHECK",
+      "repository": "aws-iac",
+      "repository_relative_path": "scripts/recheck_artifact_publisher.py",
+      "classification": "private-local",
+      "sha256": "aa088e9867483671af5d51df15b8ff0348f087678ab7c04493cc72c9003bbcb0",
+      "recorded_parent_head": "155e424f1e970a523ed765d299c91138c458148a",
+      "worktree_id": "primary",
+      "worktree_revision": "155e424f1e970a523ed765d299c91138c458148a",
+      "revision_note": "Inspected working-tree bytes; recorded HEAD does not imply these bytes are committed. See source manifest status.",
+      "source_manifest": "live-program-source-manifest.json",
+      "manifest_path": "scripts/recheck_artifact_publisher.py"
+    },
+    {
+      "id": "SRC-IAC-RECHECK-TESTS",
+      "repository": "aws-iac",
+      "repository_relative_path": "tests/test_artifact_publisher_recheck.py",
+      "classification": "private-local",
+      "sha256": "fb2e296ed12736ad124cc79736f13ddbbbe4c624acb402bb8ee55be41458a6b5",
+      "recorded_parent_head": "155e424f1e970a523ed765d299c91138c458148a",
+      "worktree_id": "primary",
+      "worktree_revision": "155e424f1e970a523ed765d299c91138c458148a",
+      "revision_note": "Inspected working-tree bytes; recorded HEAD does not imply these bytes are committed. See source manifest status.",
+      "source_manifest": "live-program-source-manifest.json",
+      "manifest_path": "tests/test_artifact_publisher_recheck.py"
+    },
+    {
+      "id": "SRC-IAC-PLANNER-READ",
+      "repository": "aws-iac",
+      "repository_relative_path": "specs/iot-ingest-config-read.md",
+      "classification": "private-local",
+      "sha256": "73dabe49eea672f00ddf7085b866d57b6dd5986baaea2ffeaff700c19c920154",
+      "recorded_parent_head": "155e424f1e970a523ed765d299c91138c458148a",
+      "worktree_id": "iot-ingest-config-read",
+      "worktree_revision": null,
+      "revision_note": "Worktree revision was not captured. Parent repository HEAD must not be attributed to these bytes; use the recorded SHA-256.",
+      "source_manifest": "live-program-source-manifest.json",
+      "manifest_path": "artifacts/worktrees/iot-ingest-config-read/specs/iot-ingest-config-read.md"
+    },
+    {
+      "id": "RECEIPT-PUBLISHER-APPLY",
+      "repository": "aws-iac",
+      "repository_relative_path": "artifacts/identity-center-bootstrap/review-uhd86fs8/maintenance-reviews/artifact-publisher-hrrbk83v/apply-result.json",
+      "classification": "retained-receipt",
+      "access": "private-local; not independently accessible through Faraday",
+      "sha256": null,
+      "revision": null,
+      "revision_note": "Private artifact revision and hash were not captured; no public URL or content copy supplied."
+    },
+    {
+      "id": "RECEIPT-PUBLISHER-POSTFLIGHT-FAILURE",
+      "repository": "aws-iac",
+      "repository_relative_path": "artifacts/identity-center-bootstrap/review-uhd86fs8/maintenance-reviews/artifact-publisher-hrrbk83v/post-apply.json",
+      "classification": "retained-receipt",
+      "access": "private-local; not independently accessible through Faraday",
+      "sha256": null,
+      "revision": null,
+      "revision_note": "Private artifact revision and hash were not captured; no public URL or content copy supplied."
+    },
+    {
+      "id": "RECEIPT-PUBLISHER-RECHECK",
+      "repository": "aws-iac",
+      "repository_relative_path": "artifacts/identity-center-bootstrap/review-uhd86fs8/maintenance-reviews/artifact-publisher-hrrbk83v/postflight-rechecks/review-7yolru5o/postflight.json",
+      "classification": "retained-receipt",
+      "access": "private-local; not independently accessible through Faraday",
+      "sha256": null,
+      "revision": null,
+      "revision_note": "Private artifact revision and hash were not captured; no public URL or content copy supplied."
+    },
+    {
+      "id": "REVIEW-IOT-BLOCKERS",
+      "repository": "aws-iac",
+      "repository_relative_path": "artifacts/iot-ingestion-blockers/review-f_jc7k76/review-summary.json",
+      "classification": "private-local",
+      "access": "private-local; not independently accessible through Faraday",
+      "sha256": null,
+      "revision": null,
+      "revision_note": "Private artifact revision and hash were not captured; no public URL or content copy supplied."
+    },
+    {
+      "id": "REPORT-ARTIFACT-VERIFICATION",
+      "repository": "aws-config",
+      "repository_relative_path": "specs/iot-ingest-artifact-binding.md",
+      "worktree_id": "iot-ingest-artifact-binding",
+      "classification": "human-reported",
+      "report_record": "SRC-CONFIG-ARTIFACT-BINDING",
+      "revision_note": "Human-reported exact-version/checksum/SHA-256/byte-equality checks; report-source hash is not a hash of a publication receipt."
+    }
+  ]
+}

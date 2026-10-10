@@ -1,7 +1,7 @@
 {
   "experiment": "EXP-003",
   "evidence_kind": "synthetic inputs against local source",
-  "target": "/home/ted/dev/iot-digital-twin",
+  "target": "iot-digital-twin",
   "target_revision": "0b303604e741dd642e93834842ed86c78f03e5b4",
   "target_worktree_status": "M docs/architecture.md\n M docs/aws-sandbox-plan.md",
   "target_source": "src/business_app/telemetry.py",
@@ -91,5 +91,11 @@
       "expectation_matched": true
     }
   ],
-  "limitation": "Direct domain invocation only; no deployed ingestion path tested."
+  "limitation": "Direct domain invocation only; no deployed ingestion path tested.",
+  "portability_revision": {
+    "source_faraday_commit": "eceea8a9cdd549d8710b8e9623ddd48147a44e02",
+    "original_document_sha256": "3aa4f04a893721dc71aa8413ad660a52fd5d59ea1fc9e96492d2d43dc15c7919",
+    "change": "Replace machine location with logical repository identity; preserve original source hashes, revisions, worktree status, and observed results. Historical bytes remain in the source commit; this is not a new observation or experiment run."
+  },
+  "classification": "private-local"
 }

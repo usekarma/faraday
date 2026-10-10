@@ -2,7 +2,7 @@
 
 **Status:** PROPOSED
 
-**Target repository:** `/home/ted/dev/iot-digital-twin`
+**Target repository:** `iot-digital-twin` (repository identity; checkout location is supplied by its custodian)
 **Source question/hypothesis:** Q-002; findings E-002 and EXP-003.
 **Experiment:** Proposed offline adapter-boundary tests, distinct from direct domain validation.
 
