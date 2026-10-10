@@ -15,6 +15,12 @@
     {"id":"E-001","type":"evidence","title":"Synthetic evidence traps, first run","status":"RECORDED","path":"evidence/E-001-evidence-traps.md"},
     {"id":"EXP-003","type":"experiment","title":"What happens when trusted identity context is absent?","status":"PROPOSED","path":"experiments/EXP-003-identity-context.md"},
     {"id":"E-002","type":"evidence","title":"IoT workflow inventory and optional-context probe","status":"RECORDED","path":"evidence/E-002-iot-boundary-inventory.md"},
-    {"id":"WP-002","type":"work-package","title":"Prove ingestion rejects missing trust context before writes","status":"PROPOSED","path":"work-packages/WP-002-require-ingestion-context.md"}
+    {"id":"WP-002","type":"work-package","title":"Prove ingestion rejects missing trust context before writes","status":"PROPOSED","path":"work-packages/WP-002-require-ingestion-context.md"},
+    {"id":"E-003","type":"evidence","title":"Interpretation of first live program engineering history","status":"RECORDED","path":"evidence/E-003-live-program-history.md"},
+    {"id":"H-002","type":"hypothesis","title":"Scoped equivalence distinguishes normalization from consequential drift","status":"TESTABLE","path":"hypotheses/H-002-scoped-verification-equivalence.md"},
+    {"id":"H-003","type":"hypothesis","title":"Backward tracing improves diagnosis of incorrect assumptions","status":"TESTABLE","path":"hypotheses/H-003-earliest-assumption-diagnosis.md"},
+    {"id":"CE-001","type":"counterexample","title":"Uncertainty reduction can accompany coercion or useless options","status":"RECORDED","path":"counterexamples/CE-001-uncertainty-and-agency.md"},
+    {"id":"Q-003","type":"question","title":"What would establish authenticated physical identity end-to-end?","status":"OPEN","path":"questions/Q-003-physical-identity-binding.md"},
+    {"id":"EXP-004","type":"experiment","title":"Blinded challenge for decision-relevant discrepancies","status":"PROPOSED","path":"experiments/EXP-004-blinded-discrepancy-challenge.md"}
   ]
 }

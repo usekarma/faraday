@@ -23,3 +23,7 @@ The concept is weakened if backward tracing adds complexity without improving di
 ## Evidence links
 
 - O-001
+
+## Assessment revision — 2026-10-10
+
+E-003 adds bounded examples of verifier and upstream-contract correction. These motivate H-003's comparative diagnosis claim but do not establish improvement over ordinary root-cause analysis. Maturity remains FORMALIZED; no causal/general effectiveness claim is promoted.

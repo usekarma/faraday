@@ -1,5 +1,13 @@
 # Roadmap
 
+## Current direction — 2026-10-10
+
+Treat the current IoT effort as the first live research program. E-003 interprets existing engineering evidence; H-002 and H-003 expose verification and correction claims to failure; CE-001 challenges agency/entropy proxies. Recommend EXP-004 as the highest-information-value next experiment under the stated subjective ranking.
+
+**STOP_FOR_HUMAN before creating any cross-repository work packages.** First decide whether to approve, revise, or reject EXP-004's frozen oracle, scope, baselines, and falsification criteria. No downstream modifications or infrastructure execution are authorized in this assessment.
+
+The older Now/Next/Later entries below preserve planning history. Their routing and implementation suggestions are superseded by this decision gate; they are not instructions to proceed.
+
 ## Now
 
 - Proposed first priority: investigate [Q-002](../../questions/Q-002-evidence-justified-continuation.md) through [WP-001](../../work-packages/WP-001-trace-evidence-boundaries.md). Select one workflow and locate its source artifacts before routing the package.

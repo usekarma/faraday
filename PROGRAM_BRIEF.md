@@ -33,6 +33,16 @@ At the end of the cycle, report changed records, claim transitions, evidence pro
 
 Can an agent-assisted engineering/research system preserve human intent, observable evidence, uncertainty, correction, and agency well enough to make autonomous systems more understandable and governable?
 
+## First live research program — 2026-10-10 direction
+
+The Karma/Adage IoT digital-twin effort is now the first live research program for observable, governable autonomous systems. Its [current assessment](programs/karma-adage-ecosystem/README.md) interprets engineering history rather than treating infrastructure completion as research success. “Live” identifies an ongoing real engineering program; end-to-end device/cloud behavior remains unverified.
+
+[E-003](evidence/E-003-live-program-history.md) assesses ten observations and their limits. The recommended next experiment is [EXP-004](experiments/EXP-004-blinded-discrepancy-challenge.md), a blinded offline test of representational versus decision-relevant differences. H-001 and the speculative care/alignment concepts remain unchanged; H-002 and H-003 make narrower verification and diagnosis claims testable.
+
+This direction supersedes the earlier provisional priority to implement WP-002. Existing packages and findings remain historical records, not current authorization. No downstream repository modification or infrastructure implementation is included.
+
+**STOP_FOR_HUMAN: Review and approve, revise, or reject EXP-004 before Faraday creates any new cross-repository work package.** Approval for package preparation would not authorize downstream execution or cloud mutation.
+
 ## Near-term objectives
 
 1. Use the IoT digital twin as a physical apparatus for identity → action → state → evidence → correction.

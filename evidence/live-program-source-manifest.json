@@ -1,0 +1,102 @@
+{
+  "collected_on": "2026-10-10",
+  "method": "Read-only local source/spec inspection; no remote verification. Private execution records were inspected selectively, referenced in E-003, and are not copied or included as raw values. Hashes identify inspected bytes, not truth.",
+  "repositories": [
+    {
+      "repository": "aws-lambda",
+      "root": "/home/ted/dev/aws-lambda",
+      "head": "497f41716af2a1e0d7ebf83166fec6217a1d070c",
+      "worktree_status": "?? release-proposals/\n?? specs/",
+      "files": [
+        {
+          "path": "iot-digital-twin-ingest/app.py",
+          "sha256": "fad33baf9b795085ab55575753d0ef4b1b218c609d08b8c39baefb2788a1ea9b"
+        },
+        {
+          "path": "iot-digital-twin-ingest/validation.py",
+          "sha256": "5229478719e1af7d9a922eef743ff295f0473791f33d1147accfb5466b03cc92"
+        },
+        {
+          "path": "iot-digital-twin-ingest/domain.py",
+          "sha256": "08d7cbb63906a0305203d071666d18ffe24ba0218341b991bb7af5e1f7346cfe"
+        },
+        {
+          "path": "iot-digital-twin-ingest/repository.py",
+          "sha256": "c308992297c9ee62b85708ca0803a83f3d4526f3925d71fd06f92af7e332ddad"
+        },
+        {
+          "path": "iot-digital-twin-ingest/tests/test_ingest.py",
+          "sha256": "8090490aa6c123f9e74481b11f6ef661df5bb752152704a91e72d3a16fdfcd5f"
+        }
+      ]
+    },
+    {
+      "repository": "aws-iac",
+      "root": "/home/ted/dev/aws-iac",
+      "head": "155e424f1e970a523ed765d299c91138c458148a",
+      "worktree_status": "M components/identity-center-permission-set/README.md\n M scripts/maintain_identity_center.py\n?? examples/identity-center-owner.iac-plan-readonly.owner-planning.json\n?? examples/identity-center-owner.iot-artifact-publisher.json\n?? examples/identity-center-owner.iot-artifact-publisher.outputs.tf\n?? scripts/artifact_publisher.py\n?? scripts/maintain_artifact_publisher.py\n?? scripts/owner_planning.py\n?? scripts/prepare_owner_planning.py\n?? scripts/recheck_artifact_publisher.py\n?? specs/iac-plan-readonly-owner-assignment.md\n?? specs/iot-artifact-publisher.md\n?? tests/test_artifact_publisher.py\n?? tests/test_artifact_publisher_maintenance.py\n?? tests/test_artifact_publisher_recheck.py\n?? tests/test_owner_planning.py\n?? tests/test_owner_planning_maintenance.py",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "a6fcf3ed904f5d07c5bc526df8c2238361af74eb0957533e22c3d1074b109399"
+        },
+        {
+          "path": "specs/iot-artifact-publisher.md",
+          "sha256": "25a7875732dae3b3772738b29c6eb63a073ce2af8c251ce7f90687456aa59152"
+        },
+        {
+          "path": "scripts/recheck_artifact_publisher.py",
+          "sha256": "aa088e9867483671af5d51df15b8ff0348f087678ab7c04493cc72c9003bbcb0"
+        },
+        {
+          "path": "tests/test_artifact_publisher_recheck.py",
+          "sha256": "fb2e296ed12736ad124cc79736f13ddbbbe4c624acb402bb8ee55be41458a6b5"
+        },
+        {
+          "path": "components/iot-digital-twin/main.tf",
+          "sha256": "d3575c1ae9f1e071fbf970d55d8e2bcc0079ea3484c09fc419d099c2012c0406"
+        },
+        {
+          "path": "artifacts/worktrees/iot-ingest-config-read/specs/iot-ingest-config-read.md",
+          "sha256": "73dabe49eea672f00ddf7085b866d57b6dd5986baaea2ffeaff700c19c920154"
+        }
+      ]
+    },
+    {
+      "repository": "aws-config",
+      "root": "/home/ted/dev/aws-config",
+      "head": "9a4a1deb556a8c7d2a3a517843fcd849064ba40c",
+      "worktree_status": "",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "a6fcf3ed904f5d07c5bc526df8c2238361af74eb0957533e22c3d1074b109399"
+        },
+        {
+          "path": "docs/iot-digital-twin-sandbox.md",
+          "sha256": "076654d74bb66a976fc4694e5523a6589784a50ea7cba0e8c49359f67fa7e2f5"
+        },
+        {
+          "path": "artifacts/worktrees/iot-ingest-artifact-binding/specs/iot-ingest-artifact-binding.md",
+          "sha256": "904563b5f97031a952aed0cd7d1080ff00873ed8f937644fa29e27f3d1fe0ff5"
+        }
+      ]
+    },
+    {
+      "repository": "iot-digital-twin",
+      "root": "/home/ted/dev/iot-digital-twin",
+      "head": "0b303604e741dd642e93834842ed86c78f03e5b4",
+      "worktree_status": "M docs/architecture.md\n M docs/aws-sandbox-plan.md",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "6267865898d865f74eccb31f37f251cbe67e3354639286799993aa68f2cdfd6a"
+        },
+        {
+          "path": "src/business_app/telemetry.py",
+          "sha256": "2dfcab1c0e2d508ed7bd12b022fe475b760e6ca4330bfe13d427ad342b54a8a3"
+        }
+      ]
+    }
+  ]
+}

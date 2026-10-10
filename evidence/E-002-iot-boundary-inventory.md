@@ -45,3 +45,7 @@ The simpler checklist explanation from Q-002 remains viable. Separate ecosystem 
 ## Program consequence and next human decision
 
 WP-001's bounded inventory is complete; the full ecosystem loop remains unverified. A follow-up proposal, WP-002, defines an offline ingestion-boundary test requiring context before any state write. Decide whether to authorize that implementation in `iot-digital-twin` under its own instructions. This report grants no deployment, cloud access, or target mutation authority.
+
+## Later scope clarification — 2026-10-10
+
+E-003 inspected the separate `aws-lambda` runtime and current `aws-iac` component, which contain required principal validation and a declared injection path. This inventory describes the prototype repository and inspected sandbox scaffold, not absence of implementation across the ecosystem. Its direct-domain results remain unchanged. The human's live-program direction supersedes WP-002 as the immediate next step with EXP-004, gated by STOP_FOR_HUMAN before new cross-repository packages.
