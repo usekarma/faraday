@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "principles": [
+    {"id": "A-001", "rule": "Faraday directs research but does not authorize consequential execution."},
+    {"id": "A-002", "rule": "Target repositories retain their own AGENTS.md, permissions, and execution gates."},
+    {"id": "A-003", "rule": "Evidence can justify a recommendation but cannot itself grant authorization."},
+    {"id": "A-004", "rule": "Knowledge refreshes are proposals until reviewed; durable history is append-only in meaning."},
+    {"id": "A-005", "rule": "Read-only inspection may update current-state proposals but must not mutate downstream systems."}
+  ],
+  "consequential_actions": [
+    "cloud_apply_or_destroy",
+    "production_write",
+    "permission_or_identity_change",
+    "secret_or_certificate_creation",
+    "device_provisioning",
+    "deployment",
+    "irreversible_migration"
+  ],
+  "required_authority": "human_or_target_repository_approved_execution_path"
+}
