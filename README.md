@@ -161,6 +161,10 @@ or simply:
 make check
 ```
 
+## GitHub tasks (small, explicit assignments)
+
+Use [GitHub Issues](https://github.com/usekarma/faraday/issues) for a bounded task or Post-it-style idea. The [task issue template](.github/ISSUE_TEMPLATE/task.md) records a goal, scope, acceptance criteria, verification evidence, and approval boundaries. When you explicitly give Faraday and an implementation agent an issue, they can follow the [issue-to-PR workflow](workflows/issue-to-pr.md) to prepare a branch, run the target repository's checks, and submit a **draft** PR with evidence. This is a documented handoff, **not** a background queue, automatic agent launch, or proven autonomous execution. Keep the IoT POC first; validate one small task end-to-end before adding coordination.
+
 ## Initial research directions
 
 Try the first executable demonstration:
