@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "evidence_id": "E-044",
+  "experiment_id": "EXP-007",
+  "recorded_on": "2026-10-14",
+  "execution_timestamp": "not captured by the retained sanitized receipt",
+  "firmware": {
+    "executed_source_commit": "ee5d6da90c952278a19566bd2969d324c6793683",
+    "application_sha256": "8d89947bb0c20c165980803bb69ef6ba0ffa69053842ef4d0b3ca229c3808445",
+    "model": "ATOM Lite ESP32-PICO-D4 revision 1.1"
+  },
+  "session_id": "647bb6cc603583773f122a97e938ab84",
+  "topic": "devices/atom-lite-001/probe",
+  "device_receipt": {
+    "provenance_grade": "retained_receipt",
+    "source_sha256": "e376edecc24e60a9a97e13a0b06a57e169605b7cc50d0bc82f3b9d43bf5c882b",
+    "events": [
+      {
+        "device_id": "atom-lite-001",
+        "event": "button_press",
+        "session_id": "647bb6cc603583773f122a97e938ab84",
+        "event_id": "647bb6cc603583773f122a97e938ab84-1",
+        "sequence": 1,
+        "puback": true
+      },
+      {
+        "device_id": "atom-lite-001",
+        "event": "button_press",
+        "session_id": "647bb6cc603583773f122a97e938ab84",
+        "event_id": "647bb6cc603583773f122a97e938ab84-2",
+        "sequence": 2,
+        "puback": true
+      },
+      {
+        "device_id": "atom-lite-001",
+        "event": "button_press",
+        "session_id": "647bb6cc603583773f122a97e938ab84",
+        "event_id": "647bb6cc603583773f122a97e938ab84-3",
+        "sequence": 3,
+        "puback": true
+      }
+    ],
+    "statuses": [
+      "BUTTON_ARMED",
+      "WIFI_READY",
+      "TLS_READY",
+      "MQTT_READY",
+      "WIFI_READY",
+      "TLS_READY",
+      "MQTT_READY",
+      "WIFI_READY",
+      "TLS_READY",
+      "MQTT_READY"
+    ],
+    "terminal": "SESSION_COMPLETE",
+    "armed_windows": 1,
+    "window_limit_seconds": 120,
+    "maximum_events": 3,
+    "configuration_resent": false,
+    "reset_requested": false,
+    "automatic_retry": false
+  },
+  "operator_confirmation": {
+    "recorded_on": "2026-10-14",
+    "provenance_grade": "human_reported",
+    "aws_console": "all three exact event IDs matched",
+    "led": {
+      "blue": "tentatively observed",
+      "green": "tentatively observed",
+      "yellow": "unconfirmed",
+      "red": "untested"
+    },
+    "screenshot_or_export_retained": false
+  },
+  "limits": [
+    "Console matches are human-reported, not independently inspected by the recording agent.",
+    "LED verification incomplete: blue/green tentative, yellow unconfirmed, red untested.",
+    "Sequence is session-local; event ID correlation is probabilistic, not attestation or replay prevention.",
+    "QoS1 does not establish exactly-once delivery; console duplicate counts were not reported.",
+    "No hardware fault, bounce, held-at-arm, cap-beyond-three or expiry test is claimed."
+  ],
+  "recording_actions": {
+    "device_tests": false,
+    "aws_changes": false,
+    "publications": false
+  }
+}
