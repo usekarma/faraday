@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "evidence_id": "E-043",
+  "recorded_on": "2026-10-14",
+  "execution_timestamp": "not captured by the sanitized attempt receipt",
+  "device": {
+    "model": "M5Stack ATOM Lite",
+    "chip": "ESP32-PICO-D4 revision 1.1"
+  },
+  "firmware": {
+    "source_commit": "b3495e59a67c728a3a5d2ff4ced12c3f2fd6de7c",
+    "application_sha256": "56248a2a153516d5fc9d432a8c99470be3db4d82980bbf88f526081b93ddaba4",
+    "host_helper": "private reviewed pacing patch applied after source commit; firmware unchanged"
+  },
+  "mqtt": {
+    "topic": "devices/atom-lite-001/probe",
+    "qos": 1,
+    "retained": false,
+    "payload": {
+      "device_id": "atom-lite-001",
+      "probe": "mqtt-proof",
+      "nonce": "00000000000000000000000000000000"
+    }
+  },
+  "device_observation": {
+    "provenance_grade": "retained_receipt",
+    "statuses": [
+      "WIFI_READY",
+      "TLS_READY",
+      "MQTT_READY",
+      "PUBACK_RECEIVED"
+    ],
+    "matching_probe_seen": true,
+    "broker_puback": true,
+    "run_once_write_attempted": true,
+    "configuration_resent": false,
+    "reset_requested": false,
+    "automatic_retry": false,
+    "source_receipt_sha256": "7527ff26fd1be957cbd3f4914b6ccfe9cce9a40be8b5287918fdbaeff29d71dd"
+  },
+  "console_observation": {
+    "recorded_on": "2026-10-14",
+    "provenance_grade": "human_reported",
+    "statement": "Operator confirmed the exact previously displayed payload appeared in the AWS IoT MQTT test client.",
+    "topic": "devices/atom-lite-001/probe",
+    "payload": {
+      "device_id": "atom-lite-001",
+      "probe": "mqtt-proof",
+      "nonce": "00000000000000000000000000000000"
+    },
+    "screenshot_or_console_export_retained": false
+  },
+  "limitations": [
+    "Fixed diagnostic nonce is not a fresh run-unique challenge and cannot rule out another matching payload.",
+    "Console observation is human-reported; no screenshot/export or independent console inspection retained.",
+    "No physical identity attestation, repeatability, durable ingestion, or production readiness established.",
+    "Software-held device key; no secure-boot or flash-encryption assurance."
+  ],
+  "recording_actions": {
+    "additional_publish": false,
+    "aws_changes": false,
+    "device_operations": false
+  }
+}

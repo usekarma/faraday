@@ -23,6 +23,7 @@
     {"id":"Q-003","type":"question","title":"What would establish authenticated physical identity end-to-end?","status":"OPEN","path":"questions/Q-003-physical-identity-binding.md"},
     {"id":"EXP-004","type":"experiment","title":"Blinded challenge for decision-relevant discrepancies","status":"PROPOSED","path":"experiments/EXP-004-blinded-discrepancy-challenge.md"},
     {"id":"E-004","type":"evidence","title":"Director-cycle source applicability check","status":"RECORDED","path":"evidence/E-004-director-cycle-source-applicability.md"},
-    {"id":"Q-004","type":"question","title":"Can the discrepancy oracle be independent and decision-relevant?","status":"OPEN","path":"questions/Q-004-independent-discrepancy-oracle.md"}
+    {"id":"Q-004","type":"question","title":"Can the discrepancy oracle be independent and decision-relevant?","status":"OPEN","path":"questions/Q-004-independent-discrepancy-oracle.md"},
+    {"id":"E-043","type":"evidence","title":"ATOM Lite single-message MQTT transport proof","status":"RECORDED","path":"evidence/E-043-atom-lite-mqtt-transport-proof.md"}
   ]
 }
